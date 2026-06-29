@@ -4,7 +4,6 @@
 #converts ridable to projectile and adds success count for projectile ticking
 #resets player riding status
 
-say hi
 
 $kill @n[predicate=sheep_wars:riding_motion_marker,name=$(playerUUID)]
 

@@ -11,7 +11,7 @@ execute store result entity @s Rotation[0] float 1 store success score @s new_pr
 execute store result entity @s Rotation[1] float 1 on passengers store success score @s new_projectile.is_riding run data get entity @s Rotation[1]
 
 #check for riding player if no converts to normal projectile
-execute if score @s new_projectile.motion_success matches 0 run return run execute at @s run function sheep_wars:projectile/summon_sheep/layer_3_transfer_dismount with entity @s data
+execute if score @s new_projectile.motion_success matches 0 run return run execute at @s run function sheep_wars:projectile/summon_sheep/layer_3/ridable_dismount with entity @s data
 
 tp @s ^ ^ ^0.5
 

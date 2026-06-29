@@ -12,7 +12,7 @@
         "predicate": {
             "nbt": {
                 "Tags": [
-                    "sheep_wars.projectile.mortar"
+                    "sheep_wars.type.mortar"
                 ]
             }
         }       

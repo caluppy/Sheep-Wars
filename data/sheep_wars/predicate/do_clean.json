@@ -15,11 +15,22 @@
                 "predicate": {
                     "nbt": {
                         "Tags": [
-                            "sheep_wars.projectile.sheep"
+                            "sheep_wars.motion.linear"
                         ]
                     }
                 }
                 
+            },
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": {
+                        "Tags": [
+                            "sheep_wars.motion.ridable"
+                        ]
+                    }
+                }
             }
         ]
     }

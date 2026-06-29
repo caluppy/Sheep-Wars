@@ -12,7 +12,7 @@
         "predicate": {
             "nbt": {
                 "Tags": [
-                    "sheep_wars.ridable","sheep_wars.carpet_bomb"
+                    "sheep_wars.ridable","sheep_wars.type.carpet_bomb"
                 ]
             }
         }       
