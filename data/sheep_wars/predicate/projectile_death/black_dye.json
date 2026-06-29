@@ -1,0 +1,12 @@
+{
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "entity_type": "item",
+        "nbt": {
+            "Item": {
+                "id":"minecraft:black_dye"
+            }
+        }
+    }
+}

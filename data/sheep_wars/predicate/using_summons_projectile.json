@@ -1,0 +1,21 @@
+[
+    {"condition": "minecraft:entity_properties",
+    "entity":"this",
+    "predicate":{
+        "equipment":{
+            "mainhand":{
+                    "items":"#sheep_wars:summons_projectile"
+                    }
+                },
+            "nbt": {
+                "Tags": [
+                   "sheep_wars_player"
+                    ]
+                }
+            }
+        },
+    {"condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {"new_projectile.cooldown":0,"right.click":{"min":1}}
+    }
+]

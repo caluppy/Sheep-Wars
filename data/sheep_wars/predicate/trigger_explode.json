@@ -1,0 +1,132 @@
+[
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_type": "#sheep_wars:do_clean"
+        }
+    },
+    {
+        "condition": "inverted",
+        "term": {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": {
+                    "Tags": [
+                        "sheep_wars.ridable"
+                    ]
+                }
+             }
+        }
+    },
+    {
+        "condition": "any_of",
+        "terms": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": {
+                        "Tags": [
+                            "sheep_wars.projectile.mortar"
+                        ]
+                    }
+                }
+                
+            },
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": {
+                        "Tags": [
+                            "sheep_wars.explosion.base"
+                        ]
+                    }
+                }
+                
+            },
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": {
+                        "Tags": [
+                            "sheep_wars.carpet_bomb"
+                        ]
+                    }
+                }
+                
+            }
+        ]
+    },
+    {
+        "condition": "any_of",
+        "terms": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": {
+                        "OnGround":true
+                    }
+                }
+                
+            },
+            {
+                "condition": "inverted",
+                "term": {
+                    "condition": "all_of",
+                    "terms": [
+                        {
+                            "condition": "location_check",
+                            "offsetX": 1,
+                            "predicate": {
+                                "block": {
+                                    "blocks": "air"
+                                }
+                            }
+                        },
+                        {
+                            "condition": "location_check",
+                            "offsetX": -1,
+                            "predicate": {
+                                "block": {
+                                    "blocks": "air"
+                                }
+                            }
+                        },
+                        {
+                            "condition": "location_check",
+                            "offsetZ": 1,
+                            "predicate": {
+                                "block": {
+                                    "blocks": "air"
+                                }
+                            }
+                        },
+                        {
+                            "condition": "location_check",
+                            "offsetZ": -1,
+                            "predicate": {
+                                "block": {
+                                    "blocks": "air"
+                                }
+                            }
+                        },
+                        {
+                            "condition": "location_check",
+                            "offsetY": 2,
+                            "predicate": {
+                                "block": {
+                                    "blocks": "air"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

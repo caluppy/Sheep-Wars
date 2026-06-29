@@ -1,0 +1,9 @@
+[
+    {
+        "condition": "entity_scores",
+        "entity": "this",
+        "scores": {
+            "new_projectile.motion_success":1
+        }
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_type": "marker",
+            "nbt": {
+                "Tags": [
+                    "sheep_wars.riding.motion_marker"
+                ]
+            }
+        }
+    }
+]

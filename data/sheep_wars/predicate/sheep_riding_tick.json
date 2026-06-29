@@ -1,0 +1,16 @@
+[
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "passenger": {
+                "entity_type": "player"
+            },
+            "nbt": {
+                "Tags": [
+                    "sheep_wars.ridable"
+                ]
+            }
+        }
+    }
+]
