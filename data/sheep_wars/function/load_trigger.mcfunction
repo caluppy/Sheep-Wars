@@ -12,6 +12,7 @@ execute positioned 10000 -64 10000 run tag @a[distance=..1000] add sheep_wars_pl
 scoreboard objectives add new_projectile.motion_success dummy
 scoreboard objectives add new_projectile.cooldown dummy
 scoreboard objectives add new_projectile.is_riding dummy
+scoreboard objectives add projectile.bounce dummy
 
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.cooldown 0
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.is_riding 0

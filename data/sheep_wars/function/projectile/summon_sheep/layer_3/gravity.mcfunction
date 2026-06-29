@@ -28,8 +28,8 @@ execute store success score @s new_projectile.motion_success store result score 
 scoreboard players set @s[scores={velocity.y=10000..}] velocity.y 10000
 scoreboard players set @s[scores={velocity.y=..-10000}] velocity.y -10000
 
-execute store result entity @s Motion[0] double 0.001 run scoreboard players get @s velocity.x
+#execute store result entity @s Motion[0] double 0.001 run scoreboard players get @s velocity.x
 execute store result entity @s Motion[1] double 0.001 run scoreboard players get @s velocity.y
-execute store result entity @s Motion[2] double 0.001 run scoreboard players get @s velocity.z
+#execute store result entity @s Motion[2] double 0.001 run scoreboard players get @s velocity.z
 
 tag @s[scores={new_projectile.motion_success=1}] remove sheep_wars.projectile.new

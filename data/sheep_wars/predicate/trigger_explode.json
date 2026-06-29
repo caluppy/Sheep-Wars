@@ -58,6 +58,18 @@
                     }
                 }
                 
+            },
+               {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": {
+                        "Tags": [
+                            "sheep_wars.explosion.small"
+                        ]
+                    }
+                }
+                
             }
         ]
     },

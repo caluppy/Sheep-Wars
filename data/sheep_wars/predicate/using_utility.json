@@ -4,7 +4,7 @@
     "predicate":{
         "equipment":{
             "mainhand":{
-                    "items":"#sheep_wars:summons_projectile"
+                    "items":"#sheep_wars:utility"
                     }
                 },
             "nbt": {
