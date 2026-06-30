@@ -13,6 +13,8 @@ scoreboard objectives add new_projectile.motion_success dummy
 scoreboard objectives add new_projectile.cooldown dummy
 scoreboard objectives add new_projectile.is_riding dummy
 scoreboard objectives add projectile.bounce dummy
+scoreboard objectives add time dummy
+scoreboard players set tick time 0
 
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.cooldown 0
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.is_riding 0

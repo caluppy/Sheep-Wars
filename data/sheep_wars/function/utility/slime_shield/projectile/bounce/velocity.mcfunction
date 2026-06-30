@@ -8,7 +8,9 @@ execute store result score @s previous.position.y run data get entity @s Pos[1] 
 execute store result score @s previous.position.z run data get entity @s Pos[2] 1000
 
 ##velocity modifiable with if statements
-tp @s ^ ^ ^1
+execute if entity @s[scores={projectile.bounce=..-1}] run function sheep_wars:utility/slime_shield/projectile/bounce/flip_rotation with entity @s
+
+tp @s[scores={projectile.bounce=1..}] ^ ^ ^1
 
 #final pos
 execute store result score @s position.x run data get entity @s Pos[0] 1000
@@ -24,4 +26,4 @@ execute store result entity @s Motion[0] double 0.003 run scoreboard players get
 execute store result entity @s Motion[1] double 0.003 run scoreboard players get @s velocity.y
 execute store result entity @s Motion[2] double 0.003 run scoreboard players get @s velocity.z
 
-schedule function sheep_wars:utility/slime_shield/projectile/cooldown 1t replace
+schedule function sheep_wars:utility/slime_shield/projectile/cooldown/schedule 1t replace

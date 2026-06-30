@@ -15,6 +15,7 @@ scoreboard objectives add velocity.z dummy
 
 #math scoreboards for constants 
 scoreboard objectives add constants dummy
+scoreboard players set #-1 constants -1
 scoreboard players set #20 constants 20
 scoreboard players set #10000 constants 10000
 

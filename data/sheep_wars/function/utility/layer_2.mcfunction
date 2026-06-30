@@ -7,3 +7,6 @@ data modify entity @s data.entityUUID set from entity @s UUID[0]
 
 scoreboard players set @s new_projectile.motion_success 0
 scoreboard players set @s projectile.bounce 0
+
+execute if entity @s[tag=sheep_wars.slime_shield] run scoreboard players set @s time 60
+tag @s remove sheep_wars.utility.new

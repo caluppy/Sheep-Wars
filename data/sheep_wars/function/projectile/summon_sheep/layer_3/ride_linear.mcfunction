@@ -14,7 +14,7 @@ execute store result score @s previous.position.x run data get entity @s Pos[0] 
 execute store result score @s previous.position.y run data get entity @s Pos[1] 1000
 execute store result score @s previous.position.z run data get entity @s Pos[2] 1000
 
-execute positioned ~ ~1 ~ run tp @s ^ ^ ^2
+execute positioned ~ ~ ~ run tp @s ^ ^ ^2
 
 #final pos
 execute store result score @s position.x run data get entity @s Pos[0] 1000
