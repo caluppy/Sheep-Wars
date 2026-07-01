@@ -10,15 +10,6 @@
           
           "functions": [
             {
-              "function": "set_custom_model_data",
-              "strings": {
-                "mode": "replace_all",
-                "values": [
-                  "1"
-                ]
-              }
-            },
-            {
               "function": "set_custom_data",
               "tag": {
                 "projectile_death":true

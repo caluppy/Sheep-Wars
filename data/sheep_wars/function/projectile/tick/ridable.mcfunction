@@ -33,8 +33,8 @@ execute store result entity @s Motion[1] double 0.001 run scoreboard players get
 execute store result entity @s Motion[2] double 0.001 run scoreboard players get @s velocity.z
 
 #tnt scheduling cant be done with schedule without unnessicary selectors so done with scoreboard tick
-scoreboard players add @s[tag=sheep_wars.type.carpet_bomb] new_projectile.cooldown 1
-execute if score @s[tag=sheep_wars.type.carpet_bomb] new_projectile.cooldown matches 40 as @s at @s run function sheep_wars:projectile/schedule/carpet_bomb
+scoreboard players add @s[predicate=sheep_wars:summon_type/ride_carpet_squid] new_projectile.cooldown 1
+execute if score @s[predicate=sheep_wars:summon_type/ride_carpet_squid] new_projectile.cooldown matches 40 as @s at @s run function sheep_wars:projectile/schedule/carpet_bomb
 
 
 execute at @s run particle small_flame ^ ^-0.5 ^-1 0.3 -0.2 0.3 0.01 3

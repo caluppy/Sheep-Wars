@@ -1,6 +1,6 @@
 
-execute if entity @s[scores={time=..0}] on passengers run kill @s
-execute if entity @s[scores={time=..0}] run return run kill @s
+execute if entity @s[predicate=sheep_wars:score/time/lessequal_0] on passengers run kill @s
+execute if entity @s[predicate=sheep_wars:score/time/lessequal_0] run return run kill @s
 
 scoreboard players remove @s time 1
 

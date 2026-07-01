@@ -3,18 +3,18 @@
         "condition": "entity_properties",
         "entity": "this",
         "predicate": {
-            "entity_type": "squid"
+            "entity_type": "sheep"
         }
     },
     {
         "condition": "entity_properties",
         "entity": "this",
         "predicate": {
-            "nbt": {
-                "Tags": [
+            "entity_tags": {
+                "all_of": [
                     "sheep_wars.ridable","sheep_wars.explosion.small"
                 ]
             }
-        }       
+        }
     }
 ]

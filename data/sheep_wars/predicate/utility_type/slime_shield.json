@@ -1,0 +1,12 @@
+{
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "entity_type": "interaction",
+        "entity_tags": {
+            "all_of": [
+                "sheep_wars.utility.slime_shield"
+            ]
+        }
+    }
+}

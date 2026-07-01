@@ -1,29 +1,9 @@
 [
     {
-    "condition": "any_of",
-    "terms": [
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "nbt": {
-                    "Tags": [
-                        "sheep_wars.motion.linear"
-                    ]
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "nbt": {
-                    "Tags": [
-                        "sheep_wars.motion.ridable"
-                        ]
-                    }
-                }
-            }
-        ]
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_type": "#sheep_wars:utility_slime_bounces"
+        }
     }
 ]

@@ -10,24 +10,13 @@
         "condition": "entity_properties",
         "entity": "this",
         "predicate": {
-            "nbt": {
-                "Tags": [
+            "entity_tags": {
+                "all_of": [
                     "sheep_wars.motion.linear","sheep_wars.explosion.base"
+                ],
+                "none_of": [
+                    "sheep_wars.ridable"
                 ]
-            }
-        }       
-    },
-    {
-        "condition": "inverted",
-        "term": {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "nbt": {
-                    "Tags": [
-                        "sheep_wars.ridable"
-                    ]
-                }
             }
         }       
     }
