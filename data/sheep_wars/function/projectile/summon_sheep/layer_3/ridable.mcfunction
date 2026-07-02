@@ -17,7 +17,7 @@ execute on passengers run attribute @s fall_damage_multiplier base set 0
 $execute at @s positioned ^ ^ ^1 on passengers rotated as @s run summon marker ~ ~ ~ {data:{"playerUUID":$(playerUUID),"entityUUID":$(entityUUID)},CustomName:"$(playerUUID)",Tags:["sheep_wars.riding.motion_marker"]}
 
 #stores UUIDs in score
-$execute as @n[predicate=sheep_wars:riding_motion_marker,name=$(playerUUID)] run scoreboard players set @s player_UUID_0 $(playerUUID)
-$execute as @n[predicate=sheep_wars:riding_motion_marker,name=$(playerUUID)] run scoreboard players set @s entity_UUID_0 $(entityUUID)
+$execute as @n[predicate=sheep_wars:projectile/riding_motion_marker,name=$(playerUUID)] run scoreboard players set @s player_UUID_0 $(playerUUID)
+$execute as @n[predicate=sheep_wars:projectile/riding_motion_marker,name=$(playerUUID)] run scoreboard players set @s entity_UUID_0 $(entityUUID)
 
 tag @s remove sheep_wars.projectile.new

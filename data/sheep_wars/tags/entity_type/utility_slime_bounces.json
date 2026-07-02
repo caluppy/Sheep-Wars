@@ -2,6 +2,8 @@
     "values": [
         "sheep",
         "squid",
-        "tnt"
+        "tnt",
+        "arrow",
+        "player"
     ]
 }

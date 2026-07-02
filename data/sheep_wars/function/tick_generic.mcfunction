@@ -5,10 +5,10 @@
 scoreboard players add tick time 1
 execute if score tick time matches 21 run scoreboard players set tick time 1
 
-execute positioned 10000 0 10000 as @e[predicate=sheep_wars:summon_type/tick_linear,distance=..500] at @s run function sheep_wars:projectile/tick/linear
-execute positioned 10000 0 10000 as @e[predicate=sheep_wars:summon_type/tick_ridable,distance=..500] at @s run function sheep_wars:projectile/tick/ridable with entity @s data
-execute positioned 10000 0 10000 if entity @e[type=item,distance=..500] as @e[predicate=sheep_wars:projectile_death/generic,nbt={Item:{components:{"minecraft:custom_data":{projectile_death:true}}}},distance=..500] at @s run function sheep_wars:cleanup/projectile_death/projectile_generic
-execute positioned 10000 0 10000 as @e[predicate=sheep_wars:trigger_explode,distance=..500] at @s run function sheep_wars:projectile/tick/trigger_explode
+execute positioned 10000 0 10000 as @e[predicate=sheep_wars:projectile/properties/tick_linear,distance=..500] at @s run function sheep_wars:projectile/tick/linear
+execute positioned 10000 0 10000 as @e[predicate=sheep_wars:projectile/properties/tick_ridable,distance=..500] at @s run function sheep_wars:projectile/tick/ridable with entity @s data
+execute positioned 10000 0 10000 if entity @e[type=item,distance=..500] as @e[predicate=sheep_wars:projectile/death/generic,nbt={Item:{components:{"minecraft:custom_data":{projectile_death:true}}}},distance=..500] at @s run function sheep_wars:cleanup/projectile_death/projectile_generic
+execute positioned 10000 0 10000 as @e[predicate=sheep_wars:projectile/trigger_explode,distance=..500] at @s run function sheep_wars:projectile/tick/trigger_explode
 
-execute positioned 10000 0 10000 as @e[predicate=sheep_wars:utility_type/slime_shield,distance=..500] at @s rotated as @s run function sheep_wars:utility/slime_shield/projectile/check/crude with entity @s
+execute positioned 10000 0 10000 as @e[predicate=sheep_wars:utility/utility_type/slime_shield,distance=..500] at @s rotated as @s run function sheep_wars:utility/slime_shield/projectile/check/crude with entity @s
 

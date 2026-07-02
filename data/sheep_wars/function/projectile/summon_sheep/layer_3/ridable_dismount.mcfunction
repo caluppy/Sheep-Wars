@@ -5,7 +5,7 @@
 #resets player riding status
 
 
-$kill @n[predicate=sheep_wars:riding_motion_marker,name=$(playerUUID)]
+$kill @n[predicate=sheep_wars:projectile/riding_motion_marker,name=$(playerUUID)]
 
 tag @s remove sheep_wars.ridable
 tag @s add sheep_wars.motion.linear
