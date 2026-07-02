@@ -7,4 +7,5 @@ execute at @e[predicate=sheep_wars:score/projectile_bounce/pos1,distance=..3.5] 
 
 playsound block.slime_block.fall master @a[distance=..50] ~ ~ ~ 1.5 0.7 1
 
-execute as @e[predicate=sheep_wars:score/projectile_bounce/pos1,distance=..3.5] at @s run function sheep_wars:utility/slime_shield/projectile/bounce/velocity with entity @s
+execute as @e[predicate=sheep_wars:score/projectile_bounce/pos1,distance=..3.5] if predicate sheep_wars:projectile/properties/motion_tagged at @s run function sheep_wars:utility/slime_shield/projectile/bounce/velocity_tagged with entity @s
+execute as @e[predicate=sheep_wars:score/projectile_bounce/pos1,distance=..3.5] unless predicate sheep_wars:projectile/properties/motion_tagged at @s run function sheep_wars:utility/slime_shield/projectile/bounce/velocity_untagged with entity @s

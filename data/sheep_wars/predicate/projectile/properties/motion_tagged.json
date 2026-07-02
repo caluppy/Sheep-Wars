@@ -1,0 +1,13 @@
+{
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "entity_type": "#sheep_wars:do_clean",
+        "entity_tags": {
+            "any_of": [
+                "sheep_wars.motion.linear",
+                "sheep_wars.motion.ridable"
+            ]
+        }
+    }
+}
