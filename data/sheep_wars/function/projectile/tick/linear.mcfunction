@@ -11,4 +11,4 @@ execute if predicate sheep_wars:projectile/summon_type/ride_fast_sheep run score
 execute if predicate sheep_wars:projectile/summon_type/ride_fast_sheep store success score @s new_projectile.is_riding on passengers run scoreboard players set @s new_projectile.is_riding 1
 execute if predicate sheep_wars:projectile/summon_type/ride_fast_sheep if score @s new_projectile.is_riding matches 0 run function sheep_wars:projectile/summon_sheep/layer_3/ridable_dismount with entity @s data
 
-execute at @s run particle cloud ^ ^ ^-0.5 0 0 0 0.01 1
+execute at @s run particle cloud ^ ^0.5 ^-2 0 0 0 0.01 1

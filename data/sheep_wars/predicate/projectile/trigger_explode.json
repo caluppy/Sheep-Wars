@@ -7,71 +7,29 @@
         }
     },
     {
-        "condition": "inverted",
-        "term": {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "nbt": {
-                    "Tags": [
-                        "sheep_wars.ridable"
-                    ]
-                }
-             }
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_tags": {
+                "none_of": [
+                    "sheep_wars.ridable"
+                ]
+            }
         }
     },
     {
-        "condition": "any_of",
-        "terms": [
-            {
-                "condition": "entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "nbt": {
-                        "Tags": [
-                            "sheep_wars.type.mortar"
-                        ]
-                    }
-                }
-                
-            },
-            {
-                "condition": "entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "nbt": {
-                        "Tags": [
-                            "sheep_wars.explosion.base"
-                        ]
-                    }
-                }
-                
-            },
-            {
-                "condition": "entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "nbt": {
-                        "Tags": [
-                            "sheep_wars.type.carpet_bomb"
-                        ]
-                    }
-                }
-                
-            },
-               {
-                "condition": "entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "nbt": {
-                        "Tags": [
-                            "sheep_wars.explosion.small"
-                        ]
-                    }
-                }
-                
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_tags": {
+                "any_of": [
+                    "sheep_wars.explosion.small",
+                    "sheep_wars.explosion.base",
+                    "sheep_wars.type.carpet_bomb",
+                    "sheep_wars.type.mortar"
+                ]
             }
-        ]
+        }
     },
     {
         "condition": "any_of",

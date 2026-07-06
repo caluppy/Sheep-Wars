@@ -1,5 +1,5 @@
 {
     "values":[
-        "sheep_wars:load_trigger"
+        "sheep_wars:game/load/load_trigger"
     ]
 }

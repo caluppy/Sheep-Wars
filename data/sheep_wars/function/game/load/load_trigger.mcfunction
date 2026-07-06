@@ -19,6 +19,10 @@ scoreboard players set tick time 0
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.cooldown 0
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.is_riding 0
 
+team add sheep_wars.blue {"text":"Blue Team","color":"blue"}
+team add sheep_wars.red {"text":"Red Team","color":"red"}
+
+
 #triggers cleanup slowloop
 function sheep_wars:cleanup/cleanup
 
