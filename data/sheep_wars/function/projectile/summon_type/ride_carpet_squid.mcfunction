@@ -4,7 +4,8 @@
 
 #check for riding first -> return + ridable fail function 
 
-execute at @s if score @s new_projectile.is_riding matches 1 run return run function sheep_wars:projectile/summon_type/rideable_fail
+execute at @s if score @s new_projectile.is_riding matches 1 run return run function sheep_wars:projectile/summon_type/ride_fail/already_riding
+execute at @s if predicate sheep_wars:player/is_sneaking run return run function sheep_wars:projectile/summon_type/ride_fail/is_sneaking
 
 $execute at @s anchored eyes run summon minecraft:squid ^ ^ ^1 {Air:3600s,Health:50,attributes:[{id:"minecraft:max_health",base:50},{id:"minecraft:fall_damage_multiplier",base:0},{id:"minecraft:air_drag_modifier",base:0},{id:"minecraft:scale",base:2}],Rotation:$(Rotation),data:{"owner":$(UUID),"playerUUID":$(UUID)},OnGround:0b,DeathLootTable:"sheep_wars:entities/death_projectile/ride_carpet_squid",Tags:["sheep_wars.motion.ridable","sheep_wars.ridable","sheep_wars.type.carpet_bomb","sheep_wars.projectile.new"]}
 playsound entity.firework_rocket.launch master @a[distance=..50,tag=sheep_wars_player] ~ ~ ~ 0.5 0.7

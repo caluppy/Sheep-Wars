@@ -10,5 +10,7 @@ $kill @n[predicate=sheep_wars:projectile/riding_motion_marker,name=$(playerUUID)
 tag @s remove sheep_wars.ridable
 tag @s add sheep_wars.motion.linear
 
-scoreboard players set @s new_projectile.motion_success 1
 $scoreboard players set @p[scores={player_UUID_0=$(playerUUID)}] new_projectile.is_riding 0
+
+execute unless score @s velocity.x < #10000 constants run return run function sheep_wars:projectile/summon_sheep/layer_3/linear with entity @s data
+scoreboard players set @s new_projectile.motion_success 1

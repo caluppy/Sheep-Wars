@@ -16,4 +16,16 @@ gamerule spawn_patrols false
 gamerule spawn_phantoms false
 gamerule spawn_wandering_traders false
 
-execute positioned 10000 0 10000 run kill @e[type=!player,distance=..500]
+#reset key scores
+scoreboard players set tick time 0
+
+#runs player specific functions
+execute as @a[tag=sheep_wars_player] at @s run function sheep_wars:game/start/team/player_generic
+
+#starts game loop
+scoreboard players set #game.running sheep_wars.options 1
+scoreboard players set #spawner.cooldown.base sheep_wars.options 10
+scoreboard players set #spawner.cooldown.modifier.red sheep_wars.options 1
+scoreboard players set #spawner.cooldown.modifier.blue sheep_wars.options 1
+scoreboard players set #spawner.cooldown.final.blue sheep_wars.options 10
+scoreboard players set #spawner.cooldown.final.red sheep_wars.options 10

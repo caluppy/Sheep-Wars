@@ -12,7 +12,7 @@
             {
               "function": "set_custom_data",
               "tag": {
-                "projectile_death":true
+                "projectile_item":true
               }
             }
           ]

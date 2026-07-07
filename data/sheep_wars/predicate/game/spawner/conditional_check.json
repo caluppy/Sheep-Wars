@@ -1,0 +1,20 @@
+[
+    {
+        "condition": "location_check",
+        "offsetY": -1,
+        "predicate": {
+            "block": {
+                "blocks": "air"
+            }
+        }        
+    },
+    {
+        "condition": "location_check",
+        "offsetY": -2,
+        "predicate": {
+            "block": {
+                "blocks": "air"
+            }
+        }        
+    }
+]
