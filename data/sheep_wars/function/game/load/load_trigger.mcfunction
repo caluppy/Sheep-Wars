@@ -27,9 +27,14 @@ scoreboard objectives add projectile.bounce dummy
 scoreboard objectives add sheep_wars.options dummy
 scoreboard players set #map sheep_wars.options 1
 scoreboard objectives add time dummy
+scoreboard objectives add count dummy
 scoreboard players set tick time 0
+
+scoreboard players set #cooldown.modifier.generic sheep_wars.options 1
+
 scoreboard players set #0 constants 0
-scoreboard players set #spawner.cooldown.modifier.generic sheep_wars.options 1
+scoreboard players set #57 constants 57
+
 
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.cooldown 0
 scoreboard players set @a[tag=sheep_wars_player] new_projectile.is_riding 0
@@ -38,7 +43,5 @@ team add sheep_wars.blue {"text":"Blue Team","color":"blue"}
 team add sheep_wars.red {"text":"Red Team","color":"red"}
 
 
-#triggers cleanup slowloop
-function sheep_wars:cleanup/cleanup
 
 

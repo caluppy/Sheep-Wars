@@ -14,9 +14,11 @@ execute if score tick time matches 20 run function sheep_wars:game/tick/1s/gener
 #projectile tick checks
 execute positioned 10000 0 10000 as @e[predicate=sheep_wars:projectile/properties/tick_linear,distance=..500] at @s run function sheep_wars:projectile/tick/linear
 execute positioned 10000 0 10000 as @e[predicate=sheep_wars:projectile/properties/tick_ridable,distance=..500] at @s run function sheep_wars:projectile/tick/ridable with entity @s data
-execute positioned 10000 0 10000 if entity @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{projectile_item:true}}}},distance=..500] as @e[predicate=sheep_wars:projectile/item/generic,distance=..500] at @s run function sheep_wars:game/tick/loot_table_conversions/projectile_item
+execute positioned 10000 0 10000 as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{projectile_item:true}}}},distance=..500] at @s run function sheep_wars:game/tick/loot_table_conversions/projectile_item/entity
 execute positioned 10000 0 10000 as @e[predicate=sheep_wars:projectile/trigger_explode,distance=..500] at @s run function sheep_wars:projectile/tick/trigger_explode with entity @s data
 
 #utility tick checks
 execute positioned 10000 0 10000 as @e[predicate=sheep_wars:utility/utility_type/slime_shield,distance=..500] at @s rotated as @s run function sheep_wars:utility/slime_shield/projectile/check/crude with entity @s
 
+#player count pickup check
+execute as @a[tag=sheep_wars_player] if score @s count >= #20 constants at @s as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{right_click:true}}}},distance=..2.5] run data merge entity @s {PickupDelay:2s}

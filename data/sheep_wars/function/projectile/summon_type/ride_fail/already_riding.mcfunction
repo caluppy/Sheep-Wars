@@ -4,3 +4,5 @@
 
 tellraw @s {"text":"Dismount before using ridables again","color":"red"}
 playsound block.anvil.land master @s ~ ~ ~ 0.5 1
+
+scoreboard players set @s new_projectile.cooldown 10

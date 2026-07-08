@@ -10,8 +10,8 @@ execute as @e[predicate=sheep_wars:game/spawner/red] at @s run function sheep_wa
 ##scoreboard reset
 scoreboard players operation #spawner.cooldown.final.red sheep_wars.options = #spawner.cooldown.base sheep_wars.options
 scoreboard players operation #spawner.cooldown.final.red sheep_wars.options *= #10000 constants
-scoreboard players operation #spawner.cooldown.final.red sheep_wars.options /= #spawner.cooldown.modifier.generic sheep_wars.options
-scoreboard players operation #spawner.cooldown.final.red sheep_wars.options /= #spawner.cooldown.modifier.red sheep_wars.options
+scoreboard players operation #spawner.cooldown.final.red sheep_wars.options /= #cooldown.modifier.generic sheep_wars.options
+scoreboard players operation #spawner.cooldown.final.red sheep_wars.options /= #cooldown.modifier.red sheep_wars.options
 scoreboard players operation #spawner.cooldown.final.red sheep_wars.options /= #10000 constants
 
 ##if spawnable spot -> spawns item
