@@ -3,6 +3,7 @@
 
 difficulty normal
 gamerule keep_inventory true
+gamerule immediate_respawn true
 
 gamerule tnt_explodes true
 gamerule mob_griefing true

@@ -21,4 +21,4 @@ execute positioned 10000 0 10000 as @e[predicate=sheep_wars:projectile/trigger_e
 execute positioned 10000 0 10000 as @e[predicate=sheep_wars:utility/utility_type/slime_shield,distance=..500] at @s rotated as @s run function sheep_wars:utility/slime_shield/projectile/check/crude with entity @s
 
 #player count pickup check
-execute as @a[tag=sheep_wars_player] if score @s count >= #20 constants at @s as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{right_click:true}}}},distance=..2.5] run data merge entity @s {PickupDelay:2s}
+execute as @a[tag=sheep_wars_player] if score @s count >= #20 constants at @s as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{right_click:true}}}},distance=..3.5] run data merge entity @s {PickupDelay:2s}
