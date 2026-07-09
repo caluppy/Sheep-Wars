@@ -28,6 +28,8 @@ scoreboard objectives add sheep_wars.options dummy
 scoreboard players set #map sheep_wars.options 1
 scoreboard objectives add time dummy
 scoreboard objectives add count dummy
+scoreboard objectives add food food
+scoreboard objectives add health health
 scoreboard players set tick time 0
 
 scoreboard players set #cooldown.modifier.generic sheep_wars.options 1

@@ -4,7 +4,7 @@
     "predicate": {
         "entity_tags": {
             "all_of": [
-                "sheep_wars.ridable"
+                "sheep_wars.motion.linear"
             ]
         }
     }

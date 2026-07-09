@@ -11,7 +11,9 @@ execute store result score @s previous.position.x run data get entity @s Pos[0] 
 execute store result score @s previous.position.y run data get entity @s Pos[1] 1000
 execute store result score @s previous.position.z run data get entity @s Pos[2] 1000
 
-execute positioned ~ ~2 ~ run tp @s ^ ^ ^1
+execute if predicate sheep_wars:projectile/summon_type/mortar_sheep positioned ~ ~2 ~ run tp @s ^ ^ ^1
+execute unless predicate sheep_wars:projectile/summon_type/mortar_sheep positioned ~ ~0.2 ~ run tp @s ^ ^ ^1
+
 
 #final pos
 execute store result score @s position.x run data get entity @s Pos[0] 1000

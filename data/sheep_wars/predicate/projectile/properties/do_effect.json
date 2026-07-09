@@ -3,14 +3,6 @@
     "terms": [
         {
             "condition": "reference",
-            "name": "sheep_wars:projectile/summon_type/mortar_sheep"
-        },
-        {
-            "condition": "reference",
-            "name": "sheep_wars:projectile/summon_type/ride_fast_sheep"
-        },
-                {
-            "condition": "reference",
             "name": "sheep_wars:projectile/summon_type/slow_sheep"
         },
                 {

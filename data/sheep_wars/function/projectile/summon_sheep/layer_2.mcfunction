@@ -10,8 +10,8 @@ scoreboard players set @s projectile.bounce 0
 
 
 
-execute as @s if entity @s[predicate=sheep_wars:projectile/summon_type/base_sheep] at @s run function sheep_wars:projectile/summon_sheep/layer_3/linear with entity @s data
-execute as @s if entity @s[predicate=sheep_wars:projectile/summon_type/mortar_sheep] at @s run function sheep_wars:projectile/summon_sheep/layer_3/gravity with entity @s data
+execute as @s if predicate sheep_wars:projectile/properties/linear unless predicate sheep_wars:projectile/properties/do_gravity unless predicate sheep_wars:projectile/properties/ridable at @s run function sheep_wars:projectile/summon_sheep/layer_3/linear with entity @s data
+execute as @s if predicate sheep_wars:projectile/properties/do_gravity unless predicate sheep_wars:projectile/properties/ridable at @s run function sheep_wars:projectile/summon_sheep/layer_3/gravity with entity @s data
 
-execute as @s if entity @s[predicate=sheep_wars:projectile/summon_type/ride_fast_sheep] at @s run function sheep_wars:projectile/summon_sheep/layer_3/ride_linear with entity @s data
-execute as @s if entity @s[predicate=sheep_wars:projectile/summon_type/ride_carpet_squid] at @s run function sheep_wars:projectile/summon_sheep/layer_3/ridable with entity @s data
+execute as @s if predicate sheep_wars:projectile/summon_type/ride_fast_sheep at @s run function sheep_wars:projectile/summon_sheep/layer_3/ride_linear with entity @s data
+execute as @s if predicate sheep_wars:projectile/summon_type/ride_carpet_squid at @s run function sheep_wars:projectile/summon_sheep/layer_3/ridable with entity @s data
