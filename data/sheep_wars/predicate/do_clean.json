@@ -7,14 +7,27 @@
         }
     },
     {
-        "condition": "entity_properties",
-        "entity": "this",
-        "predicate": {
-            "entity_tags": {
-                "any_of": [
-                    "sheep_wars.motion.linear","sheep_wars.motion.ridable"
-                ]
+        "condition": "any_of",
+        "terms": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "entity_tags": {
+                        "any_of": [
+                            "sheep_wars.motion.linear","sheep_wars.motion.ridable"
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "reference",
+                "name": "sheep_wars:projectile/riding_motion_marker"
+            },
+            {
+                "condition": "reference",
+                "name": "sheep_wars:projectile/clean/display_entity"
             }
-        }
+        ]
     }
 ]

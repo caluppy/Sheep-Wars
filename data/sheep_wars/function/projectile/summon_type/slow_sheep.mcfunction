@@ -7,4 +7,7 @@ $execute at @s anchored eyes run summon minecraft:sheep ^ ^ ^ {Color:10,attribut
 playsound entity.sheep.hurt master @a[distance=..50] ~ ~ ~ 0.5 0
 clear @s purple_dye[custom_data={right_click:true}] 1
 
+execute if entity @s[team=sheep_wars.blue] run team join sheep_wars.blue @n[tag=sheep_wars.projectile.new,distance=..3]
+execute if entity @s[team=sheep_wars.red] run team join sheep_wars.red @n[tag=sheep_wars.projectile.new,distance=..3]
+
 execute as @n[tag=sheep_wars.projectile.new,distance=..3] at @s run function sheep_wars:projectile/summon_sheep/layer_2 with entity @s

@@ -1,7 +1,18 @@
 [
     {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_tags": {
+                "all_of": [
+                    "sheep_wars.motion.ridable"
+                ]
+            }
+        }
+    },
+    {
         "condition": "reference",
-        "name": "sheep_wars:projectile/summon_type/ride_carpet_squid"
+        "name": "sheep_wars:projectile/properties/ridable"
     },
     {
         "condition": "entity_scores",

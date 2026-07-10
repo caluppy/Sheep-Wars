@@ -1,8 +1,8 @@
 {
     "values": [
-        "minecraft:item",
-        "minecraft:sheep",
-        "minecraft:squid",
-        "minecraft:marker"
+        "sheep",
+        "squid",
+        "marker",
+        "text_display"
     ]
 }

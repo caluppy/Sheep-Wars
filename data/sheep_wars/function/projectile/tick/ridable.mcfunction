@@ -17,12 +17,12 @@ execute store result entity @s Rotation[1] float 1 on passengers store success s
 execute if score @s new_projectile.is_riding matches 0 run return run execute at @s run function sheep_wars:projectile/summon_sheep/layer_3/ridable_dismount with entity @s data
 
 #tp
-$execute rotated as @p[scores={player_UUID_0=$(playerUUID)}] at @s run tp @n[predicate=sheep_wars:projectile/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] ^ ^ ^0.5
+$execute rotated as @p[scores={player_UUID_0=$(playerUUID)}] at @s run tp @n[predicate=sheep_wars:projectile/clean/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] ^ ^ ^0.5
 
 #final pos -> vel -> motion
-$execute store result score @s position.x run data get entity @n[predicate=sheep_wars:projectile/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] Pos[0] 1000
-$execute store result score @s position.y run data get entity @n[predicate=sheep_wars:projectile/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] Pos[1] 1000
-$execute store result score @s position.z run data get entity @n[predicate=sheep_wars:projectile/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] Pos[2] 1000
+$execute store result score @s position.x run data get entity @n[predicate=sheep_wars:projectile/clean/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] Pos[0] 1000
+$execute store result score @s position.y run data get entity @n[predicate=sheep_wars:projectile/clean/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] Pos[1] 1000
+$execute store result score @s position.z run data get entity @n[predicate=sheep_wars:projectile/clean/riding_motion_marker,scores={player_UUID_0=$(playerUUID),entity_UUID_0=$(entityUUID)}] Pos[2] 1000
 
 execute store result score @s velocity.x run scoreboard players operation @s position.x -= @s previous.position.x
 execute store result score @s velocity.y run scoreboard players operation @s position.y -= @s previous.position.y

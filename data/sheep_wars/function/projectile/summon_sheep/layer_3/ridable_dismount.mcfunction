@@ -5,7 +5,7 @@
 #resets player riding status
 
 
-$kill @n[predicate=sheep_wars:projectile/riding_motion_marker,name=$(playerUUID)]
+$kill @n[predicate=sheep_wars:projectile/clean/riding_motion_marker,name=$(playerUUID)]
 
 tag @s remove sheep_wars.ridable
 tag @s add sheep_wars.motion.linear
@@ -14,4 +14,3 @@ $scoreboard players set @p[scores={player_UUID_0=$(playerUUID)}] new_projectile.
 
 schedule function sheep_wars:projectile/schedule/dismount_cooldown 1t
 scoreboard players set @s new_projectile.motion_success 1
-
