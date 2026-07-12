@@ -1,0 +1,13 @@
+[
+    {
+        "condition": "reference",
+        "name": "sheep_wars:player/alive"
+    },
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "team": "sheep_wars.red"
+        }
+    }
+]

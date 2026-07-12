@@ -5,7 +5,7 @@
         "entity_type": "item",
         "nbt": {
             "Item": {
-                "id":"minecraft:gray_dye"
+                "id":"minecraft:purple_dye"
             }
         }
     }

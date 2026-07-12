@@ -21,5 +21,5 @@ title @s actionbar {"text":"GO","color":"green","bold":true}
 
 #assign team function teams must be assigned before this called
 #check if player on any team -> if not call random assign based on which team has less players
-execute if entity @s[team=sheep_wars.blue] run function sheep_wars:game/start/team/blue
-execute if entity @s[team=sheep_wars.red] run function sheep_wars:game/start/team/red
+execute if entity @s[predicate=sheep_wars:player/team_blue] run function sheep_wars:game/start/team/blue
+execute if entity @s[predicate=sheep_wars:player/team_red] run function sheep_wars:game/start/team/red

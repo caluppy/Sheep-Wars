@@ -10,8 +10,12 @@
 execute as @e[predicate=sheep_wars:do_clean] at @s run function sheep_wars:game/tick/1s/cleanup/cleanup
 
 #resets player fall damage after riding sheep if touching ground
-execute as @a[tag=sheep_wars_player] if data entity @s {OnGround:1b} run attribute @s fall_damage_multiplier base reset
+execute as @a[predicate=sheep_wars:player/alive] if data entity @s {OnGround:1b} run attribute @s fall_damage_multiplier base reset
 
+
+#gametime
+scoreboard players add game.time sheep_wars.background 1
+team modify display.game_time suffix [{"text":" "},{"score":{name:"game.time","objective":"sheep_wars.background"},"color":"gold"}]
 
 ##spawner timer
 #executes spawn function if final timer = 0 reset happens in other function

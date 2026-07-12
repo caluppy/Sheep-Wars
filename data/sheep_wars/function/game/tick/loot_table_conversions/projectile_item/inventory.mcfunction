@@ -6,3 +6,6 @@ execute if items entity @s container.* white_dye[custom_data~{projectile_item:tr
 execute if items entity @s container.* green_dye[custom_data~{projectile_item:true}] run function sheep_wars:game/tick/loot_table_conversions/projectile_item/inventory_type/green_dye
 execute if items entity @s container.* light_blue_dye[custom_data~{projectile_item:true}] run function sheep_wars:game/tick/loot_table_conversions/projectile_item/inventory_type/light_blue_dye
 execute if items entity @s container.* gray_dye[custom_data~{projectile_item:true}] run function sheep_wars:game/tick/loot_table_conversions/projectile_item/inventory_type/gray_dye
+execute if items entity @s container.* pink_dye[custom_data~{projectile_item:true}] run function sheep_wars:game/tick/loot_table_conversions/projectile_item/inventory_type/pink_dye
+execute if items entity @s container.* purple_dye[custom_data~{projectile_item:true}] run function sheep_wars:game/tick/loot_table_conversions/projectile_item/inventory_type/purple_dye
+execute if items entity @s container.* black_dye[custom_data~{projectile_item:true}] run function sheep_wars:game/tick/loot_table_conversions/projectile_item/inventory_type/black_dye

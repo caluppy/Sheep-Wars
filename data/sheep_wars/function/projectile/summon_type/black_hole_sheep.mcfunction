@@ -1,5 +1,5 @@
 
-##healing sheep
+##black hole sheep
 #sublayer between 1 and 2 for type picking
 #summons with cosmetics, can always add more for fun!
 
@@ -7,7 +7,7 @@ $execute at @s anchored eyes run summon minecraft:sheep ^ ^ ^ {Color:15,attribut
 playsound entity.player.teleport master @a[distance=..50] ~ ~ ~ 0.5 0.7
 clear @s black_dye[custom_data={right_click:true}] 1
 
-execute if entity @s[team=sheep_wars.blue] run team join sheep_wars.blue @n[tag=sheep_wars.projectile.new,distance=..3]
-execute if entity @s[team=sheep_wars.red] run team join sheep_wars.red @n[tag=sheep_wars.projectile.new,distance=..3]
+execute if entity @s[predicate=sheep_wars:player/team_blue] run team join sheep_wars.blue @n[tag=sheep_wars.projectile.new,distance=..3]
+execute if entity @s[predicate=sheep_wars:player/team_red] run team join sheep_wars.red @n[tag=sheep_wars.projectile.new,distance=..3]
 
 execute as @n[tag=sheep_wars.projectile.new,distance=..3] at @s run function sheep_wars:projectile/summon_sheep/layer_2 with entity @s

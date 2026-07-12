@@ -1,3 +1,4 @@
+execute at @s if predicate sheep_wars:projectile/touching_barrier run scoreboard players set @s time 0
 
 execute if entity @s[predicate=sheep_wars:score/time/lessequal_0] on passengers run kill @s
 execute if entity @s[predicate=sheep_wars:score/time/lessequal_0] run return run kill @s

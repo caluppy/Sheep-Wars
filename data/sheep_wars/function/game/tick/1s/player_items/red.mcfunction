@@ -12,4 +12,4 @@ scoreboard players operation #item.cooldown.final.red sheep_wars.options /= #coo
 scoreboard players operation #item.cooldown.final.red sheep_wars.options /= #10000 constants
 
 ##if spawnable spot -> spawns item
-execute as @a[tag=sheep_wars_player,team=sheep_wars.red] run function sheep_wars:game/tick/1s/player_items/give_items
+execute as @a[predicate=sheep_wars:player/team_red] run function sheep_wars:game/tick/1s/player_items/give_items

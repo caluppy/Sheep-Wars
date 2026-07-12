@@ -22,7 +22,7 @@
             },
             {
                 "condition": "reference",
-                "name": "sheep_wars:projectile/riding_motion_marker"
+                "name": "sheep_wars:projectile/clean/riding_motion_marker"
             },
             {
                 "condition": "reference",
