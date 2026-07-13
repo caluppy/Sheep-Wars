@@ -17,18 +17,25 @@ gamerule spawn_patrols false
 gamerule spawn_phantoms false
 gamerule spawn_wandering_traders false
 
+
 ##reset key scores + set up sidebar display
 scoreboard players set tick time 0
 
+scoreboard objectives remove sheep_wars.display
+scoreboard objectives add sheep_wars.display dummy {"text":"Sheep Wars","color":"gold","bold":true}
+scoreboard objectives modify sheep_wars.display numberformat blank
 scoreboard objectives setdisplay sidebar sheep_wars.display
+
 #using give air instead of team list because team list includes nonplayer entities on team
 execute store result score players.blue sheep_wars.background run give @a[predicate=sheep_wars:player/team_blue] air
 execute store result score players.red sheep_wars.background run give @a[predicate=sheep_wars:player/team_red] air
 team modify display.players_left.blue suffix [{"text":" "},{"score":{name:"players.blue","objective":"sheep_wars.background"},"color":"gold"}]
 team modify display.players_left.red suffix [{"text":" "},{"score":{name:"players.red","objective":"sheep_wars.background"},"color":"gold"}]
+
 scoreboard players set Blue sheep_wars.display 0
 scoreboard players set Red sheep_wars.display 0
 scoreboard players set Players sheep_wars.display 1
+
 #timer display
 scoreboard players set game.time sheep_wars.background 0
 team modify display.game_time suffix [{"text":" "},{"score":{name:"game.time","objective":"sheep_wars.background"},"color":"gold"}]
@@ -49,15 +56,16 @@ scoreboard players set #game.running sheep_wars.options 1
 #base and final will be separate 
 
 ##spawner scores
-scoreboard players set #spawner.cooldown.base sheep_wars.options 20
-scoreboard players set #cooldown.modifier.red sheep_wars.options 1
-scoreboard players set #cooldown.modifier.blue sheep_wars.options 1
-scoreboard players set #spawner.cooldown.final.blue sheep_wars.options 20
-scoreboard players set #spawner.cooldown.final.red sheep_wars.options 20
+scoreboard players set #spawner.cooldown.base sheep_wars.options 40
+scoreboard players set #spawner.cooldown.final.blue sheep_wars.options 40
+scoreboard players set #spawner.cooldown.final.red sheep_wars.options 40
 
 ##player item scores
-scoreboard players set #item.cooldown.base sheep_wars.options 10
-scoreboard players set #item.cooldown.final.blue sheep_wars.options 10
-scoreboard players set #item.cooldown.final.red sheep_wars.options 10
+scoreboard players set #item.cooldown.base sheep_wars.options 20
+scoreboard players set #item.cooldown.final.blue sheep_wars.options 20
+scoreboard players set #item.cooldown.final.red sheep_wars.options 20
+
+scoreboard players set #cooldown.modifier.red sheep_wars.options 1
+scoreboard players set #cooldown.modifier.blue sheep_wars.options 1
 
 function sheep_wars:structure/map/clear/lobby_temp

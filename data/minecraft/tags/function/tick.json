@@ -1,7 +1,7 @@
 {
-    "values":[
+    "values": [
         "sheep_wars:game/tick/tick_generic",
+        "sheep_wars:lobby/tick",
         "sheep_wars:game/tick/right_click_tick"
     ]
-    
 }

@@ -7,7 +7,7 @@
 ##scoreboard reset
 scoreboard players operation #item.cooldown.final.red sheep_wars.options = #item.cooldown.base sheep_wars.options
 scoreboard players operation #item.cooldown.final.red sheep_wars.options *= #10000 constants
-scoreboard players operation #item.cooldown.final.red sheep_wars.options /= #cooldown.modifier.generic sheep_wars.options
+scoreboard players operation #item.cooldown.final.red sheep_wars.options /= #spawnrate sheep_wars.options
 scoreboard players operation #item.cooldown.final.red sheep_wars.options /= #cooldown.modifier.red sheep_wars.options
 scoreboard players operation #item.cooldown.final.red sheep_wars.options /= #10000 constants
 

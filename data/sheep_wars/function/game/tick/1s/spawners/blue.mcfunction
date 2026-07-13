@@ -11,7 +11,7 @@ execute as @e[predicate=sheep_wars:game/spawner/blue] at @s run function sheep_w
 ##scoreboard reset
 scoreboard players operation #spawner.cooldown.final.blue sheep_wars.options = #spawner.cooldown.base sheep_wars.options
 scoreboard players operation #spawner.cooldown.final.blue sheep_wars.options *= #10000 constants
-scoreboard players operation #spawner.cooldown.final.blue sheep_wars.options /= #cooldown.modifier.generic sheep_wars.options
+scoreboard players operation #spawner.cooldown.final.blue sheep_wars.options /= #spawnrate sheep_wars.options
 scoreboard players operation #spawner.cooldown.final.blue sheep_wars.options /= #cooldown.modifier.blue sheep_wars.options
 scoreboard players operation #spawner.cooldown.final.blue sheep_wars.options /= #10000 constants
 

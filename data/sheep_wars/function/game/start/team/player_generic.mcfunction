@@ -3,6 +3,7 @@
 
 #clears key.player.dat
 gamemode survival @s
+effect clear @s
 clear @s
 tag @s add sheep_wars_player
 xp set @s 0 points
