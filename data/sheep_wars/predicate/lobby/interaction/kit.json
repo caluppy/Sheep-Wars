@@ -1,0 +1,17 @@
+[
+    {
+        "condition": "reference",
+        "name": "sheep_wars:lobby/interaction/generic"
+    },
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_tags": {
+                "all_of": [
+                    "sheep_wars.click.kit"
+                ]
+            }
+        }
+    }
+]

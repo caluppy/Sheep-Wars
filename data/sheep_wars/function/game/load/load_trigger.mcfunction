@@ -36,13 +36,14 @@ scoreboard players set #map sheep_wars.options 1
 scoreboard players set #gamemode sheep_wars.options 1
 scoreboard players set #spawnrate sheep_wars.options 2
 scoreboard players set #cooldown.modifier.generic sheep_wars.options 2
+scoreboard players set @a[predicate=sheep_wars:player/alive] sheep_wars.options 0
+
+scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.cooldown 0
+scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.is_riding 0
 
 scoreboard players set #0 constants 0
 scoreboard players set #57 constants 57
 scoreboard players set #3 constants 3
-
-scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.cooldown 0
-scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.is_riding 0
 
 
 team add sheep_wars.blue {"text":"Blue Team","color":"blue"}

@@ -1,5 +1,5 @@
 
-## if attack or interact join team
+## if attack leave team
 #triggered as player
 
 execute unless predicate sheep_wars:player/team_blue run return fail

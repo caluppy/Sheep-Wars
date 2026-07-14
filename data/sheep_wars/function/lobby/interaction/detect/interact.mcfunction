@@ -7,6 +7,9 @@ execute if predicate sheep_wars:lobby/interaction/team_blue on target at @s run 
 execute if predicate sheep_wars:lobby/interaction/map on target at @s run function sheep_wars:lobby/modifiers/map/add
 execute if predicate sheep_wars:lobby/interaction/gamemode on target at @s run function sheep_wars:lobby/modifiers/gamemode/add
 execute if predicate sheep_wars:lobby/interaction/spawnrate on target at @s run function sheep_wars:lobby/modifiers/options/spawnrate/add
+execute if predicate sheep_wars:lobby/interaction/start on target at @s run function sheep_wars:lobby/modifiers/ready/true
+execute if predicate sheep_wars:lobby/interaction/kit on target at @s run function sheep_wars:lobby/modifiers/kit/select
+
 
 #cleared change in timestamp for next tick
 data merge entity @s {interaction:{timestamp:0}}

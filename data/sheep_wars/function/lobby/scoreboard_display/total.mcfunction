@@ -25,6 +25,11 @@ team join display.lobby.map §
 team join display.lobby.gamemode §§
 team join display.lobby.spawnrate Spawns:
 
+bossbar add sheep.wars.display.ready [{text:"Players Ready","color":"gold"}]
+bossbar set sheep.wars.display.ready color green
+bossbar set sheep.wars.display.ready players @a[predicate=sheep_wars:player/alive]
+
+
 scoreboard players set Map: sheep_wars.display 5
 function sheep_wars:lobby/scoreboard_display/map
 

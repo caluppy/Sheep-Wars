@@ -1,0 +1,13 @@
+[
+    {
+        "condition": "reference",
+        "name": "sheep_wars:player/alive"
+    },
+    {
+        "condition": "inverted",
+        "term": {
+            "condition": "reference",
+            "name": "sheep_wars:player/on_team"
+        }
+    }
+]

@@ -1,0 +1,9 @@
+
+#gives info on each kit when clicked
+
+playsound entity.villager.trade master @s ~ ~ ~ 0.3 1.5
+
+execute if score @s sheep_wars.options matches 0 run tellraw @s [{"text":"\n\n\n\nKit:","color":"gold","bold":true},{"text":" Random\n\n","color":"red"},[{"text":"Abilities:","bold":false,"color":"green"},{"text":"\n - ","color":"gray"},{"text":"???","color":"red"},{"text":"\nEquipment:","color":"green"},{"text":"\n - ","color":"gray"},{"text":"???","color":"red"}]]
+execute if score @s sheep_wars.options matches 1 run tellraw @s [{"text":"\nKit:","color":"gold","bold":true},{"text":" Knight\n\n","color":"yellow"},[{"text":"Abilities:","bold":false,"color":"green"},{"text":"\n - none","color":"gray"},{"text":"\nEquipment:","color":"green"},{"text":"\n - Iron sword and Shield\n - Iron Chestplate\n - Crossbow + 5 x Arrows\n - Copper Pickaxe","color":"gray"}]]
+execute if score @s sheep_wars.options matches 2 run tellraw @s [{"text":"\nKit:","color":"gold","bold":true},{"text":" Lumberjack\n\n","color":"dark_green"},[{"text":"Abilities:","bold":false,"color":"green"},{"text":"\n - none","color":"gray"},{"text":"\nEquipment:","color":"green"},{"text":"\n - Iron Axe and Shield\n - Copper leggings, Copper boots\n - Crossbow + 5 x Arrows\n - Axe can mine all blocks","color":"gray"}]]
+execute if score @s sheep_wars.options matches 3 run tellraw @s [{"text":"\nKit:","color":"gold","bold":true},{"text":" Scout\n\n","color":"aqua"},[{"text":"Abilities:","bold":false,"color":"green"},{"text":"\n - Lunge","color":"gray"},{"text":"\nEquipment:","color":"green"},{"text":"\n - Iron Spear and Fishing rod\n - Iron Boots\n - Windcharge x 5 (renewable)\n - Copper Pickaxe","color":"gray"}]]

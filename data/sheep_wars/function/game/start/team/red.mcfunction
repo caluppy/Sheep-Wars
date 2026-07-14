@@ -14,7 +14,7 @@ item replace entity @s armor.feet with leather_boots[unbreakable={},enchantment_
 item replace entity @s hotbar.8 with red_terracotta 10
 
 #invoke kit specific items here
-#give blocks
+function sheep_wars:game/start/kits/get
 
 #tp into map
 tp @s 10000 -35 9968 0 0
