@@ -42,8 +42,9 @@ scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.cool
 scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.is_riding 0
 
 scoreboard players set #0 constants 0
-scoreboard players set #57 constants 57
 scoreboard players set #3 constants 3
+scoreboard players set #8 constants 8
+scoreboard players set #57 constants 57
 
 
 team add sheep_wars.blue {"text":"Blue Team","color":"blue"}

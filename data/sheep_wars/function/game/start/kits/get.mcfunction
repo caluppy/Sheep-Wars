@@ -7,5 +7,7 @@ execute if score @s sheep_wars.options matches 0 store result score @s sheep_war
 execute if score @s sheep_wars.options matches 1 run function sheep_wars:game/start/kits/knight
 execute if score @s sheep_wars.options matches 2 run function sheep_wars:game/start/kits/lumberjack
 execute if score @s sheep_wars.options matches 3 run function sheep_wars:game/start/kits/scout
+execute if score @s sheep_wars.options matches 4 run function sheep_wars:game/start/kits/archer
+execute if score @s sheep_wars.options matches 5 run function sheep_wars:game/start/kits/miner
 
 execute if predicate sheep_wars:player/do_randomise_kit run function sheep_wars:game/start/kits/get_display

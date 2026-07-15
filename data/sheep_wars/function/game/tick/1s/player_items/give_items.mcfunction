@@ -6,6 +6,8 @@
 ##food and effect handling
 execute if predicate sheep_wars:player/do_regen run effect give @s minecraft:saturation 6 0 true
 
+##kit restocks
+execute if predicate sheep_wars:player/kit/restock run function sheep_wars:game/tick/1s/player_items/restock/generic
 
 ##generic items w/ max count dependancies
 execute store result score @s count run clear @s #terracotta 0
