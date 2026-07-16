@@ -8,8 +8,6 @@ data modify entity @s data.entityUUID set from entity @s UUID[0]
 scoreboard players set @s new_projectile.motion_success 0
 scoreboard players set @s projectile.bounce 0
 
-
-
 execute as @s if predicate sheep_wars:projectile/properties/linear unless predicate sheep_wars:projectile/properties/do_gravity unless predicate sheep_wars:projectile/properties/ridable at @s run function sheep_wars:projectile/summon_sheep/layer_3/linear with entity @s data
 execute as @s if predicate sheep_wars:projectile/properties/do_gravity unless predicate sheep_wars:projectile/properties/ridable at @s run function sheep_wars:projectile/summon_sheep/layer_3/gravity with entity @s data
 

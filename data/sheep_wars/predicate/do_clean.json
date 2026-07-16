@@ -27,6 +27,10 @@
             {
                 "condition": "reference",
                 "name": "sheep_wars:projectile/clean/display_entity"
+            },
+            {
+                "condition": "reference",
+                "name": "sheep_wars:projectile/clean/arrow"
             }
         ]
     }

@@ -8,4 +8,4 @@ effect give @s instant_health infinite 10 true
 effect give @s saturation infinite 255 true
 effect give @s resistance infinite 255 true
 
-tp @s 10000 41 10000 ~ 90
+tp @s 10000 41 10000

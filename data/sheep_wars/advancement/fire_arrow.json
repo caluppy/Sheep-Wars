@@ -1,0 +1,24 @@
+{
+    "criteria": {
+        "use_bow": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "bow"
+                }
+            }
+        },
+        "shot_crossbow": {
+            "trigger": "shot_crossbow"
+        }
+    },
+    "requirements": [
+        [
+            "use_bow",
+            "shot_crossbow"
+        ]
+    ],
+    "rewards": {
+        "function": "sheep_wars:projectile/schedule/claim_arrow/start"
+    }
+}

@@ -3,8 +3,13 @@
 
 #copying player UUID for ownership tracking and entity uniqueness before teleporting to add direction
 #execute store result score @s player_UUID_0 run data get entity @s data.playerUUID
+
 $scoreboard players set @s player_UUID_0 $(playerUUID)
 $scoreboard players set @s entity_UUID_0 $(entityUUID)
+
+$execute if entity @a[predicate=sheep_wars:player/team_blue,scores={player_UUID_0=$(playerUUID)},limit=1] run team join sheep_wars.blue @s
+$execute if entity @a[predicate=sheep_wars:player/team_red,scores={player_UUID_0=$(playerUUID)},limit=1] run team join sheep_wars.red @s
+
 
 $execute if entity @s[tag=sheep_wars.projectile.new] run ride @p[distance=..5,scores={player_UUID_0=$(playerUUID)},limit=1] mount @s
 execute on passengers run attribute @s fall_damage_multiplier base set 0

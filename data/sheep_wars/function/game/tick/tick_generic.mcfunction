@@ -18,6 +18,8 @@ execute positioned 10000 0 10000 as @e[type=item,nbt={Item:{components:{"minecra
 #utility tick checks
 execute positioned 10000 0 10000 as @e[predicate=sheep_wars:utility/utility_type/slime_shield,distance=..500] at @s rotated as @s run function sheep_wars:utility/slime_shield/projectile/check/crude with entity @s
 
+#powerup tick checks
+execute positioned 10000 0 10000 as @e[predicate=sheep_wars:powerup/tick,distance=..500] at @s run function sheep_wars:powerup/tick/detect
+
 #player checks: count pickup check
-execute as @a[predicate=sheep_wars:player/alive] if score @s count >= #20 constants at @s as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{right_click:true}}}},distance=..3.5] run data merge entity @s {PickupDelay:2s}
-execute as @a[predicate=sheep_wars:player/alive] at @s if predicate sheep_wars:player/death run function sheep_wars:game/death/detect
+execute as @a[predicate=sheep_wars:player/alive] at @s run function sheep_wars:game/tick/tick_player

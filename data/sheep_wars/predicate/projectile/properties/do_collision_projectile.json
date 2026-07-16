@@ -1,0 +1,21 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "reference",
+            "name": "sheep_wars:projectile/properties/motion_tagged"
+        },
+        {
+            "condition": "reference",
+            "name": "sheep_wars:projectile/properties/effect_active"
+        },
+        {
+            "condition": "reference",
+            "name": "sheep_wars:player/alive"
+        },
+        {
+            "condition": "reference",
+            "name": "sheep_wars:projectile/properties/do_collision_slime"
+        }
+    ]
+}

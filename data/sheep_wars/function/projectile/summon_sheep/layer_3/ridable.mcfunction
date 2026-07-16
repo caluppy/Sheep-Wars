@@ -3,9 +3,12 @@
 #applies player and entity UUID[0] to scoreboards for unique tagging by player and entity for armor stand recognition
 
 ##see line 17 can apply UUIDs directly to data then remove lines 21 and 22, just need 24
-
 $scoreboard players set @s player_UUID_0 $(playerUUID)
 $scoreboard players set @s entity_UUID_0 $(entityUUID)
+
+$execute if entity @a[predicate=sheep_wars:player/team_blue,scores={player_UUID_0=$(playerUUID)},limit=1] run team join sheep_wars.blue @s
+$execute if entity @a[predicate=sheep_wars:player/team_red,scores={player_UUID_0=$(playerUUID)},limit=1] run team join sheep_wars.red @s
+
 
 #mounts player and sets fall damage to 0, reset when touch ground by cleanup function
 $execute if entity @s[tag=sheep_wars.projectile.new] run ride @p[distance=..5,scores={player_UUID_0=$(playerUUID)},limit=1] mount @s

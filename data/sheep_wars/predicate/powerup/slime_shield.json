@@ -1,0 +1,15 @@
+{
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "entity_type": "item_display",
+        "entity_tags": {
+            "all_of": [
+                "sheep_wars.powerup.generic"
+            ],
+            "none_of": [
+                "sheep_wars.powerup.new"
+            ]
+        }
+    }
+}

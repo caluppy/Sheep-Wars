@@ -1,0 +1,43 @@
+[
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_type": "item_display",
+            "entity_tags": {
+                "all_of": [
+                    "sheep_wars.powerup.generic"
+                ]
+            }
+        }
+    },
+    {
+        "condition": "any_of",
+        "terms": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "location": {
+                        "position": {
+                            "x": 10000.5,
+                            "y": 0,
+                            "z": 10000.5
+                        }
+                    }
+                }
+            },
+                        {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "entity_tags": {
+                        "all_of": [
+                            "sheep_wars.powerup.new"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+]
