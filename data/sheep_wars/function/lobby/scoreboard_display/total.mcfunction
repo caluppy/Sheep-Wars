@@ -1,12 +1,13 @@
 
 ##reset from game display to lobby display
 
-execute positioned 10000 41 10000 as @a[gamemode=adventure,distance=..20] run tag @s add sheep_wars_player
+execute positioned 10000 41 10000 as @a[gamemode=adventure,distance=..20] run tag @s add sheep_wars.player
 
 scoreboard objectives remove sheep_wars.display
 scoreboard objectives add sheep_wars.display dummy {"text":"Sheep Wars","color":"gold","bold":true}
 scoreboard objectives modify sheep_wars.display numberformat blank
-scoreboard objectives setdisplay sidebar sheep_wars.display
+scoreboard objectives setdisplay sidebar.team.blue sheep_wars.display
+scoreboard objectives setdisplay sidebar.team.red sheep_wars.display
 
 ##Lobby score cosmetic load
 # every § means new blank score 

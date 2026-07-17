@@ -8,3 +8,8 @@ execute if score #powerup.type sheep_wars.background matches 1 run summon item_d
 
 
 execute positioned 10000 0 10000 as @e[predicate=sheep_wars:powerup/new,distance=..1] at @s run function sheep_wars:powerup/summon/score
+
+
+execute store result score #powerup.cooldown.final sheep_wars.background run random value 15..25
+scoreboard players operation #powerup.cooldown.final sheep_wars.background *= #spawnrate sheep_wars.options
+scoreboard players operation #powerup.cooldown.final sheep_wars.background *= #cooldown.modifier.generic sheep_wars.background

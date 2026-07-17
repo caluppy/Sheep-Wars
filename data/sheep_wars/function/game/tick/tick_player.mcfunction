@@ -1,5 +1,5 @@
 
-execute if predicate sheep_wars:player/death run function sheep_wars:game/death/detect
+execute if predicate sheep_wars:player/death unless predicate sheep_wars:player/win run function sheep_wars:game/death/detect
 
 ##scans for right click on useful items then resets right click score
 execute if predicate sheep_wars:player/using_summons_projectile run function sheep_wars:projectile/summon_sheep/layer_1 with entity @s

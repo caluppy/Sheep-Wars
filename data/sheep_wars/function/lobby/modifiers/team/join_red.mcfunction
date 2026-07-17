@@ -2,6 +2,7 @@
 ## if interact join team
 #triggered as player
 
+tag @s add sheep_wars.player
 execute if predicate sheep_wars:player/team_red run return fail
 
 team join sheep_wars.red @s

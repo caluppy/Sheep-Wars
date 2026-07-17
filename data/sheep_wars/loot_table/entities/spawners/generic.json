@@ -14,37 +14,37 @@
                 {
                     "type": "item",
                     "name": "white_dye",
-                    "weight": 10
+                    "weight": 50
                 },
                 {
                     "type": "item",
                     "name": "green_dye",
-                    "weight": 6
+                    "weight": 20
                 },
                 {
                     "type": "item",
                     "name": "purple_dye",
-                    "weight": 3
+                    "weight": 10
                 },
                 {
                     "type": "item",
                     "name": "pink_dye",
-                    "weight": 3
+                    "weight": 10
                 },
                 {
                     "type": "item",
                     "name": "black_dye",
-                    "weight": 2
+                    "weight": 10
                 },
                 {
                     "type": "item",
                     "name": "light_blue_dye",
-                    "weight": 2
+                    "weight": 7
                 },
                 {
                     "type": "item",
                     "name": "gray_dye",
-                    "weight": 1
+                    "weight": 3
                 }
             ]
         }

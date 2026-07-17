@@ -5,7 +5,7 @@
 gamemode survival @s
 effect clear @s
 clear @s
-tag @s add sheep_wars_player
+tag @s add sheep_wars.player
 xp set @s 0 points
 xp set @s 0 levels
 

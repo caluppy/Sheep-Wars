@@ -4,8 +4,8 @@
     "predicate": {
         "entity_tags": {
             "all_of": [
-                "sheep_wars_player",
-                "sheep_wars_player.ready"
+                "sheep_wars.player",
+                "sheep_wars.player.ready"
             ]
         }
     }

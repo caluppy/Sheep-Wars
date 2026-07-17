@@ -4,7 +4,7 @@
 
 execute unless predicate sheep_wars:player/lobby_ready run return fail
 
-tag @s remove sheep_wars_player.ready
+tag @s remove sheep_wars.player.ready
 title @s actionbar {"text":"Ready Cancelled","color":"red"}
 playsound minecraft:block.beacon.deactivate master @s ~ ~ ~ 0.3 2
 

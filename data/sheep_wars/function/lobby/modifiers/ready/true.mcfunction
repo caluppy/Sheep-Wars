@@ -3,9 +3,11 @@
 ## interact = ready
 #triggered as player
 
+
 execute if predicate sheep_wars:player/lobby_ready run return fail
 
-tag @s add sheep_wars_player.ready
+tag @s add sheep_wars.player
+tag @s add sheep_wars.player.ready
 title @s actionbar {"text":"Ready!","color":"green"}
 playsound minecraft:block.beacon.power_select master @s ~ ~ ~ 0.3 2
 

@@ -24,7 +24,8 @@ scoreboard players set tick time 0
 scoreboard objectives remove sheep_wars.display
 scoreboard objectives add sheep_wars.display dummy {"text":"Sheep Wars","color":"gold","bold":true}
 scoreboard objectives modify sheep_wars.display numberformat blank
-scoreboard objectives setdisplay sidebar sheep_wars.display
+scoreboard objectives setdisplay sidebar.team.blue sheep_wars.display
+scoreboard objectives setdisplay sidebar.team.red sheep_wars.display
 
 #using give air instead of team list because team list includes nonplayer entities on team
 execute store result score players.blue sheep_wars.background run give @a[predicate=sheep_wars:player/team_blue] air
@@ -46,7 +47,7 @@ scoreboard players set Time: sheep_wars.display 2
 execute as @a[predicate=sheep_wars:player/alive] at @s run function sheep_wars:game/start/team/player_generic
 
 #starts game loop
-scoreboard players set #game.running sheep_wars.options 1
+scoreboard players set #game.running sheep_wars.background 1
 
 ##sets up spawner timer with modifiers
 #base cooldown will change as timer progresses
@@ -55,17 +56,30 @@ scoreboard players set #game.running sheep_wars.options 1
 #spawner.modifier-s are consistent between player spawner and powerup spawns
 #base and final will be separate 
 
+scoreboard players set #cooldown.modifier.red sheep_wars.background 2
+scoreboard players set #cooldown.modifier.blue sheep_wars.background 2
+scoreboard players set #cooldown.modifier.generic sheep_wars.background 2
+
 ##spawner scores
-scoreboard players set #spawner.cooldown.base sheep_wars.options 40
-scoreboard players set #spawner.cooldown.final.blue sheep_wars.options 40
-scoreboard players set #spawner.cooldown.final.red sheep_wars.options 40
+scoreboard players set #spawner.cooldown.base sheep_wars.background 5
+
+scoreboard players operation #spawner.cooldown.final.blue sheep_wars.background = #spawner.cooldown.base sheep_wars.background
+scoreboard players operation #spawner.cooldown.final.blue sheep_wars.background *= #spawnrate sheep_wars.options
+scoreboard players operation #spawner.cooldown.final.blue sheep_wars.background *= #cooldown.modifier.generic sheep_wars.background
+execute store result score #spawner.cooldown.final.red sheep_wars.background run scoreboard players operation #spawner.cooldown.final.blue sheep_wars.background *= #cooldown.modifier.blue sheep_wars.background
 
 ##player item scores
-scoreboard players set #item.cooldown.base sheep_wars.options 20
-scoreboard players set #item.cooldown.final.blue sheep_wars.options 20
-scoreboard players set #item.cooldown.final.red sheep_wars.options 20
+scoreboard players set #item.cooldown.base sheep_wars.background 3
 
-scoreboard players set #cooldown.modifier.red sheep_wars.options 1
-scoreboard players set #cooldown.modifier.blue sheep_wars.options 1
+scoreboard players operation #item.cooldown.final.blue sheep_wars.background = #item.cooldown.base sheep_wars.background
+scoreboard players operation #item.cooldown.final.blue sheep_wars.background *= #spawnrate sheep_wars.options
+scoreboard players operation #item.cooldown.final.blue sheep_wars.background *= #cooldown.modifier.generic sheep_wars.background
+execute store result score #item.cooldown.final.red sheep_wars.background run scoreboard players operation #item.cooldown.final.blue sheep_wars.background *= #cooldown.modifier.blue sheep_wars.background
+
+
+##powerup scores
+execute store result score #powerup.cooldown.final sheep_wars.background run random value 15..25
+scoreboard players operation #powerup.cooldown.final sheep_wars.background *= #spawnrate sheep_wars.options
+scoreboard players operation #powerup.cooldown.final sheep_wars.background *= #cooldown.modifier.generic sheep_wars.background
 
 function sheep_wars:structure/map/clear/lobby_temp

@@ -2,8 +2,8 @@
 ##generic tick loop for sheepwars
 #triggers other tick functions so data can be referenced by macros
 
-##only runs if #game.running options = 1 (will always run if hashed)
-execute if score #game.running sheep_wars.options matches 0 run return fail
+##only runs if #game.running background = 1 (will always run if hashed)
+execute if score #game.running sheep_wars.background matches 0 run return fail
 
 scoreboard players add tick time 1
 execute if score tick time matches 21 run scoreboard players set tick time 1

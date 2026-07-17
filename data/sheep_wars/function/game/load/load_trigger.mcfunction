@@ -6,7 +6,7 @@
 
 
 #applies local sheepwars player tag so effects isnt global
-execute positioned 10000 -64 10000 run tag @a[distance=..1000] add sheep_wars_player
+execute positioned 10000 -64 10000 run tag @a[distance=..1000] add sheep_wars.player
 
 ##objective adding and resetting key scores
 
@@ -35,7 +35,6 @@ scoreboard players set tick time 0
 scoreboard players set #map sheep_wars.options 1
 scoreboard players set #gamemode sheep_wars.options 1
 scoreboard players set #spawnrate sheep_wars.options 2
-scoreboard players set #cooldown.modifier.generic sheep_wars.options 2
 scoreboard players set @a[predicate=sheep_wars:player/alive] sheep_wars.options 0
 
 scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.cooldown 0

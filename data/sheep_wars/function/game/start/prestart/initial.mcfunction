@@ -7,7 +7,7 @@ title @a[predicate=sheep_wars:player/alive] actionbar {"text":"Game starting!","
 execute as @a[predicate=sheep_wars:player/alive] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.5 1
 
 bossbar remove sheep.wars.display.ready
-tag @a[predicate=sheep_wars:player/alive] remove sheep_wars_player.ready
+tag @a[predicate=sheep_wars:player/alive] remove sheep_wars.player.ready
 
 execute if entity @a[predicate=sheep_wars:player/no_team] run function sheep_wars:game/start/prestart/team_randomise/assign
 

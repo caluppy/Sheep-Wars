@@ -19,18 +19,20 @@ team modify display.game_time suffix [{"text":" "},{"score":{name:"game.time","o
 
 ##spawner timer
 #executes spawn function if final timer = 0 reset happens in other function
-scoreboard players remove #spawner.cooldown.final.blue sheep_wars.options 1
-execute if score #spawner.cooldown.final.blue sheep_wars.options <= #0 constants run function sheep_wars:game/tick/1s/spawners/blue
+scoreboard players remove #spawner.cooldown.final.blue sheep_wars.background 1
+execute if score #spawner.cooldown.final.blue sheep_wars.background <= #0 constants run function sheep_wars:game/tick/1s/spawners/blue
 
-scoreboard players remove #spawner.cooldown.final.red sheep_wars.options 1
-execute if score #spawner.cooldown.final.red sheep_wars.options <= #0 constants run function sheep_wars:game/tick/1s/spawners/red
+scoreboard players remove #spawner.cooldown.final.red sheep_wars.background 1
+execute if score #spawner.cooldown.final.red sheep_wars.background <= #0 constants run function sheep_wars:game/tick/1s/spawners/red
 
 ##player item timer
 #executes spawn function if final timer = 0 reset happens in other function
-scoreboard players remove #item.cooldown.final.blue sheep_wars.options 1
-execute if score #item.cooldown.final.blue sheep_wars.options <= #0 constants run function sheep_wars:game/tick/1s/player_items/blue
+scoreboard players remove #item.cooldown.final.blue sheep_wars.background 1
+execute if score #item.cooldown.final.blue sheep_wars.background <= #0 constants run function sheep_wars:game/tick/1s/player_items/blue
 
-scoreboard players remove #item.cooldown.final.red sheep_wars.options 1
-execute if score #item.cooldown.final.red sheep_wars.options <= #0 constants run function sheep_wars:game/tick/1s/player_items/red
+scoreboard players remove #item.cooldown.final.red sheep_wars.background 1
+execute if score #item.cooldown.final.red sheep_wars.background <= #0 constants run function sheep_wars:game/tick/1s/player_items/red
 
 ##powerups
+scoreboard players remove #powerup.cooldown.final sheep_wars.background 1
+execute if score #powerup.cooldown.final sheep_wars.background <= #0 constants run function sheep_wars:powerup/summon/select

@@ -6,7 +6,7 @@
 clear @s
 effect clear @s
 gamemode spectator @s
-tag @s remove sheep_wars_player
+tag @s remove sheep_wars.player
 scoreboard players set @s death 0
 
 tp @s 10000 -20 10000
