@@ -39,7 +39,8 @@ scoreboard players set Players sheep_wars.display 1
 
 #timer display
 scoreboard players set game.time sheep_wars.background 0
-team modify display.game_time suffix [{"text":" "},{"score":{name:"game.time","objective":"sheep_wars.background"},"color":"gold"}]
+scoreboard players set game.time.minutes sheep_wars.background 0
+team modify display.game_time suffix [{"text":" "},{"text":"0","color":"gold"},{"text":":","color":"yellow"},{"text":"00","color":"gold"}]
 scoreboard players set Time: sheep_wars.display 2
 
 

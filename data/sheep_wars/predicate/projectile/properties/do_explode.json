@@ -16,6 +16,10 @@
         {
             "condition": "reference",
             "name": "sheep_wars:projectile/summon_type/ride_carpet_squid"
+        },
+        {
+            "condition": "reference",
+            "name": "sheep_wars:projectile/summon_type/air_strike"
         }
     ]
 }

@@ -12,6 +12,10 @@
                 {
             "condition": "reference",
             "name": "sheep_wars:projectile/summon_type/black_hole_sheep"
+        },
+        {
+            "condition": "reference",
+            "name": "sheep_wars:projectile/summon_type/magentalamb"
         }
     ]
 }

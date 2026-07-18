@@ -5,7 +5,8 @@
         "entity_type": "item_display",
         "entity_tags": {
             "all_of": [
-                "sheep_wars.powerup.generic"
+                "sheep_wars.powerup.generic",
+                "sheep_wars.powerup.slime_shield"
             ],
             "none_of": [
                 "sheep_wars.powerup.new"

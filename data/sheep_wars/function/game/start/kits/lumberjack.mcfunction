@@ -10,7 +10,7 @@ item replace entity @s weapon.offhand with shield[unbreakable={},enchantment_gli
 
 item replace entity @s hotbar.1 with crossbow[unbreakable={},enchantment_glint_override=false,enchantments={binding_curse:1},tooltip_display={hidden_components:[enchantments,"dyed_color",unbreakable]}]
 
-item replace entity @s inventory.0 with arrow 5
+item replace entity @s inventory.8 with arrow 5
 
 item replace entity @s armor.legs with copper_leggings[unbreakable={},attribute_modifiers=[{id:armor,type:"armor",amount:4,operation:"add_value","slot":"legs"}],enchantment_glint_override=false,enchantments={binding_curse:1},tooltip_display={hidden_components:[enchantments,"dyed_color",unbreakable]}]
 item replace entity @s armor.feet with copper_boots[unbreakable={},enchantment_glint_override=false,enchantments={binding_curse:1},tooltip_display={hidden_components:[enchantments,"dyed_color",unbreakable]}]

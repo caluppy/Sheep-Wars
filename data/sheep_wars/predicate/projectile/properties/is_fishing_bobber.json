@@ -2,6 +2,6 @@
     "condition": "entity_properties",
     "entity": "this",
     "predicate": {
-        "entity_type": "#sheep_wars:powerup_reciever_intermediate"
+        "entity_type": "fishing_bobber"
     }
 }

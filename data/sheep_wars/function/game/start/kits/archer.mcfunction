@@ -10,6 +10,6 @@ item replace entity @s weapon.offhand with bow[unbreakable={},enchantment_glint_
 
 item replace entity @s hotbar.1 with copper_pickaxe[unbreakable={},tool={default_mining_speed:1,rules:[{blocks:"#mineable/pickaxe",speed:7},{blocks:"#minecraft:mineable/axe",speed:2}]},enchantment_glint_override=false,enchantments={binding_curse:1},tooltip_display={hidden_components:[enchantments,"dyed_color",unbreakable]}]
 
-item replace entity @s inventory.0 with arrow 8
+item replace entity @s inventory.8 with arrow 8
 
 item replace entity @s armor.feet with golden_boots[unbreakable={},enchantment_glint_override=false,enchantments={binding_curse:1},tooltip_display={hidden_components:[enchantments,"dyed_color",unbreakable]}]

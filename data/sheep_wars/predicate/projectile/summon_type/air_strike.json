@@ -1,0 +1,23 @@
+[
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_type": "chicken"
+        }
+    },
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_tags": {
+                "all_of": [
+                    "sheep_wars.motion.linear","sheep_wars.type.air_strike"
+                ],
+                "none_of": [
+                    "sheep_wars.ridable"
+                ]
+            }
+        }       
+    }
+]

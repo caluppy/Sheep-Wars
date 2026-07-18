@@ -1,0 +1,33 @@
+[
+    {
+        "condition": "reference",
+        "name": "sheep_wars:player/alive"
+    },
+    {
+        "condition": "any_of",
+        "terms": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "equipment": {
+                        "mainhand": {
+                            "items": "fishing_rod"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "equipment": {
+                        "offhand": {
+                            "items": "fishing_rod"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]

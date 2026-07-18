@@ -1,9 +1,9 @@
 
 ##1s generic clock for triggering other low priority game loops
 
-##current functions
-# game timer (not yet)
-#spawner timer
+scoreboard players set tick time 0
+scoreboard players add seconds time 1
+execute if score seconds time matches 5 run function sheep_wars:game/tick/5s/generic
 
 ##cleanup
 #kills cleanable entities triggers other cleaning functions if nessicary first
@@ -15,7 +15,11 @@ execute as @a[predicate=sheep_wars:player/alive] if data entity @s {OnGround:tru
 
 #gametime
 scoreboard players add game.time sheep_wars.background 1
-team modify display.game_time suffix [{"text":" "},{"score":{name:"game.time","objective":"sheep_wars.background"},"color":"gold"}]
+execute if score game.time sheep_wars.background matches 60 run scoreboard players add game.time.minutes sheep_wars.background 1
+execute if score game.time sheep_wars.background matches 60 run scoreboard players set game.time sheep_wars.background 0
+
+execute if score game.time sheep_wars.background < #10 constants run team modify display.game_time suffix [{"text":" "},{"score":{name:"game.time.minutes","objective":"sheep_wars.background"},"color":"gold"},{"text":":","color":"yellow"},{"text":"0","color":"gold"},{"score":{name:"game.time","objective":"sheep_wars.background"},"color":"gold"}]
+execute if score game.time sheep_wars.background >= #10 constants run team modify display.game_time suffix [{"text":" "},{"score":{name:"game.time.minutes","objective":"sheep_wars.background"},"color":"gold"},{"text":":","color":"yellow"},{"score":{name:"game.time","objective":"sheep_wars.background"},"color":"gold"}]
 
 ##spawner timer
 #executes spawn function if final timer = 0 reset happens in other function

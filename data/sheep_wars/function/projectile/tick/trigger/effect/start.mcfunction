@@ -10,7 +10,9 @@ $summon text_display ~ ~ ~ {billboard:"center",data:{playerUUID:$(playerUUID),en
 $ride @n[type=text_display,nbt={data:{playerUUID:$(playerUUID),entityUUID:$(entityUUID)}},distance=..1] mount @s
 
 execute store result score @s time on passengers run scoreboard players set @s time 30
+scoreboard players set @s count 0
 execute if predicate sheep_wars:projectile/summon_type/heal_sheep store result score @s time on passengers run scoreboard players set @s time 45
+execute if predicate sheep_wars:projectile/summon_type/magentalamb store result score @s time on passengers run scoreboard players set @s time 5
 
 execute on passengers run data merge entity @s {text:[{"score":{name:"@s",objective:"time"},"color":"gold"},{"text":"s","color":"red"}]}
 

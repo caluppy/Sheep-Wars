@@ -3,7 +3,9 @@
         "condition": "entity_properties",
         "entity": "this",
         "predicate": {
-            "entity_type": "#arrows"
+            "entity_type": [
+                "arrow", "spectral_arrow", "fishing_bobber", "wind_charge"
+            ]
         }
     },
     {

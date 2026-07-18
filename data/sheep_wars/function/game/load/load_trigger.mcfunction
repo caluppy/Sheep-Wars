@@ -43,6 +43,7 @@ scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.is_r
 scoreboard players set #0 constants 0
 scoreboard players set #3 constants 3
 scoreboard players set #8 constants 8
+scoreboard players set #10 constants 10
 scoreboard players set #57 constants 57
 
 

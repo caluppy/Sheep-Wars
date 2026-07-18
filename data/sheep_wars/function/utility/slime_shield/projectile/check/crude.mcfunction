@@ -4,7 +4,7 @@
 #check entities within crude radius every tick
 #iff bouncable entity in radius does specific check
 
-execute if score tick time matches 20 run function sheep_wars:utility/slime_shield/projectile/check/time
+execute if score tick time matches 19 run function sheep_wars:utility/slime_shield/projectile/check/time
 
 execute unless entity @e[predicate=sheep_wars:projectile/properties/do_collision_slime,distance=..4] run return fail
 

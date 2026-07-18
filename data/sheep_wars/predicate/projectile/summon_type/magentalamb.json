@@ -1,0 +1,23 @@
+[
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_type": "sheep"
+        }
+    },
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_tags": {
+                "all_of": [
+                    "sheep_wars.type.magentalamb"
+                ],
+                "none_of": [
+                    "sheep_wars.ridable"
+                ]
+            }
+        }       
+    }
+]

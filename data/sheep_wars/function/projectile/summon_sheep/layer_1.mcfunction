@@ -7,6 +7,8 @@ scoreboard players set @s new_projectile.cooldown 20
 #non-ridables
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run function sheep_wars:projectile/summon_type/base_sheep with entity @s
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run function sheep_wars:projectile/summon_type/mortar_sheep with entity @s
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run function sheep_wars:projectile/summon_type/air_strike with entity @s
+
 
 #ridables
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run function sheep_wars:projectile/summon_type/ride_fast_sheep with entity @s
@@ -16,3 +18,4 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:gray_dye"}}] at @s run fun
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:pink_dye"}}] at @s run function sheep_wars:projectile/summon_type/heal_sheep with entity @s
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run function sheep_wars:projectile/summon_type/slow_sheep with entity @s
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:black_dye"}}] at @s run function sheep_wars:projectile/summon_type/black_hole_sheep with entity @s
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:magenta_dye"}}] at @s run function sheep_wars:projectile/summon_type/magentalamb with entity @s

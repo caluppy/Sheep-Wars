@@ -10,15 +10,24 @@
         },
         "shot_crossbow": {
             "trigger": "shot_crossbow"
+        },
+        "use_windcharge": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "wind_charge"
+                }
+            }
         }
     },
     "requirements": [
         [
             "use_bow",
-            "shot_crossbow"
+            "shot_crossbow",
+            "use_windcharge"
         ]
     ],
     "rewards": {
-        "function": "sheep_wars:projectile/schedule/claim_arrow/start"
+        "function": "sheep_wars:projectile/schedule/claim_projectile/start"
     }
 }

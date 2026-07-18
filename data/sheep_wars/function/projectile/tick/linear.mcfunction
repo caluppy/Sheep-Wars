@@ -12,3 +12,7 @@ execute if predicate sheep_wars:projectile/summon_type/ride_fast_sheep if predic
 execute if predicate sheep_wars:projectile/summon_type/ride_fast_sheep if predicate sheep_wars:projectile/properties/ridable if score @s new_projectile.is_riding matches 0 run function sheep_wars:projectile/summon_sheep/layer_3/ridable_dismount with entity @s data
 
 execute at @s run particle cloud ^ ^0.5 ^-2 0 0 0 0.01 1
+
+#tnt scheduling cant be done with schedule without unnessicary selectors so done with scoreboard tick
+scoreboard players add @s[predicate=sheep_wars:projectile/summon_type/air_strike] new_projectile.cooldown 1
+execute if score @s[predicate=sheep_wars:projectile/summon_type/air_strike] new_projectile.cooldown matches 4 as @s at @s run function sheep_wars:projectile/schedule/air_strike with entity @s data

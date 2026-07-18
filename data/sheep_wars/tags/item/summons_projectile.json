@@ -1,11 +1,13 @@
 {
     "values": [
-        "minecraft:white_dye",
-        "minecraft:gray_dye",
-        "minecraft:green_dye",
-        "minecraft:light_blue_dye",
-        "minecraft:pink_dye",
-        "minecraft:black_dye",
-        "minecraft:purple_dye"
+        "white_dye",
+        "gray_dye",
+        "green_dye",
+        "light_blue_dye",
+        "pink_dye",
+        "black_dye",
+        "purple_dye",
+        "magenta_dye",
+        "red_dye"
     ]
 }
