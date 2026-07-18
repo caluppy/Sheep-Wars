@@ -35,6 +35,8 @@ scoreboard players set tick time 0
 scoreboard players set #map sheep_wars.options 1
 scoreboard players set #gamemode sheep_wars.options 1
 scoreboard players set #spawnrate sheep_wars.options 2
+scoreboard players set #friendly_fire sheep_wars.options 1
+scoreboard players set #bounce sheep_wars.options 1
 scoreboard players set @a[predicate=sheep_wars:player/alive] sheep_wars.options 0
 
 scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.cooldown 0
@@ -52,3 +54,6 @@ team modify sheep_wars.blue color blue
 
 team add sheep_wars.red {"text":"Red Team","color":"red"}
 team modify sheep_wars.red color red
+
+team add sheep_wars.none {"text":"No Team","color":"gray"}
+team modify sheep_wars.none color gray

@@ -8,6 +8,7 @@ scoreboard objectives add sheep_wars.display dummy {"text":"Sheep Wars","color":
 scoreboard objectives modify sheep_wars.display numberformat blank
 scoreboard objectives setdisplay sidebar.team.blue sheep_wars.display
 scoreboard objectives setdisplay sidebar.team.red sheep_wars.display
+scoreboard objectives setdisplay sidebar.team.gray sheep_wars.display
 
 ##Lobby score cosmetic load
 # every § means new blank score 
@@ -22,9 +23,19 @@ team add display.lobby.spawnrate
 team modify display.lobby.spawnrate color dark_gray
 team modify display.lobby.spawnrate prefix {"text":" ","color":"gray"}
 
+team add display.lobby.friendly_fire
+team modify display.lobby.friendly_fire color dark_gray
+team modify display.lobby.friendly_fire prefix {"text":" Team "}
+
+team add display.lobby.bounce
+team modify display.lobby.bounce color dark_gray
+team modify display.lobby.bounce prefix {"text":" "}
+
 team join display.lobby.map §
 team join display.lobby.gamemode §§
 team join display.lobby.spawnrate Spawns:
+team join display.lobby.friendly_fire Kill:
+team join display.lobby.bounce Bounce:
 
 bossbar add sheep.wars.display.ready [{text:"Players Ready","color":"gold"}]
 bossbar set sheep.wars.display.ready color green

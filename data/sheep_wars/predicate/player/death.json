@@ -11,6 +11,15 @@
             }
         },
         {
+            "condition": "location_check",
+            "offsetY": -2,
+            "predicate": {
+                "block": {
+                    "blocks": "barrier"
+                }
+            }
+        },
+        {
             "condition": "entity_scores",
             "entity": "this",
             "scores": {

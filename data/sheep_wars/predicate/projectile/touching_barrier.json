@@ -49,6 +49,15 @@
             },
             {
                 "condition": "location_check",
+                "offsetY": -1,
+                "predicate": {
+                    "block": {
+                        "blocks": "barrier"
+                    }
+                }
+            },
+            {
+                "condition": "location_check",
                 "offsetY": 2,
                 "predicate": {
                     "block": {

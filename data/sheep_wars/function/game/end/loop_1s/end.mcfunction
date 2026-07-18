@@ -10,11 +10,8 @@ execute as @a[predicate=sheep_wars:player/on_team] run function sheep_wars:game/
 execute if data storage sheep_wars:options_randomise {map:true} run scoreboard players set #map sheep_wars.options 0
 execute if data storage sheep_wars:options_randomise {gamemode:true} run scoreboard players set #gamemode sheep_wars.options 0
 execute if data storage sheep_wars:options_randomise {spawnrate:true} run scoreboard players set #spawnrate sheep_wars.options 0
+execute if data storage sheep_wars:options_randomise {friendly_fire:true} run scoreboard players set #friendly_fire sheep_wars.options 0
+execute if data storage sheep_wars:options_randomise {bounce:true} run scoreboard players set #bounce sheep_wars.options 0
 
-execute as @a[predicate=sheep_wars:player/do_randomise_team] run team leave @s
-execute as @a[predicate=sheep_wars:player/do_randomise_team] run tag @s remove sheep_wars.player.random.team
-
-execute as @a[predicate=sheep_wars:player/do_randomise_kit] run scoreboard players set @s sheep_wars.options 0
-execute as @a[predicate=sheep_wars:player/do_randomise_kit] run tag @s remove sheep_wars.player.random.kit
 
 function sheep_wars:lobby/scoreboard_display/total

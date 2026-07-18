@@ -4,7 +4,7 @@
 
 execute unless predicate sheep_wars:player/team_red run return fail
 
-team leave @s
+team join sheep_wars.none @s
 title @s actionbar {"text":"Left Red Team","color":"red"}
 playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1
 
