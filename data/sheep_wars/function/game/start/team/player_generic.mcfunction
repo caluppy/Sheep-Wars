@@ -6,8 +6,11 @@ gamemode survival @s
 effect clear @s
 clear @s
 tag @s add sheep_wars.player
+spawnpoint @s 10000 0 10000
+
 xp set @s 0 points
 xp set @s 0 levels
+
 
 effect give @s saturation 1 100 true
 effect give @s instant_health 1 100 true

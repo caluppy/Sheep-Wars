@@ -3,6 +3,7 @@ title @s actionbar [{"text":"Teleporting to lobby","color":"red"}]
 clear @s
 effect clear @s
 gamemode adventure @s
+spawnpoint @s 0 -2 0 90 -35
 tag @s remove sheep_wars.player.win
 
 effect give @s instant_health infinite 10 true
