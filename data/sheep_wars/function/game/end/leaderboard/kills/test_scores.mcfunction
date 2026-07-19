@@ -1,0 +1,2 @@
+
+tellraw @s [{"text":"#total: "},{"score":{name:"#total",objective:"sort.count"}},{"text":" #total.previous: "},{"score":{name:"#total.previous",objective:"sort.count"}},{"text":" #step: "},{"score":{name:"#step",objective:"sort.order.kills"}}]

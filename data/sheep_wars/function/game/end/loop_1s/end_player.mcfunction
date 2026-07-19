@@ -3,6 +3,9 @@ title @s actionbar [{"text":"Teleporting to lobby","color":"red"}]
 clear @s
 effect clear @s
 gamemode adventure @s
+xp set @s 0 levels
+xp set @s 0 points
+
 spawnpoint @s 0 -2 0 90 -35
 tag @s remove sheep_wars.player.win
 

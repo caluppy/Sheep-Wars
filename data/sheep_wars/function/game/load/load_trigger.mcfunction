@@ -17,6 +17,10 @@ scoreboard objectives add count dummy
 scoreboard objectives add food food
 scoreboard objectives add health health
 scoreboard objectives add death deathCount
+scoreboard objectives add kills playerKillCount
+scoreboard objectives add sort.count dummy
+scoreboard objectives add sort.order.kills dummy
+
 
 scoreboard objectives add interaction.attack.time dummy
 scoreboard objectives add interaction.interact.time dummy

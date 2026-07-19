@@ -11,6 +11,7 @@ execute as @e[predicate=sheep_wars:do_clean] at @s run function sheep_wars:game/
 
 #resets player fall damage after riding sheep if touching ground
 execute as @a[predicate=sheep_wars:player/alive] if data entity @s {OnGround:true} run attribute @s fall_damage_multiplier base reset
+execute as @a[predicate=sheep_wars:player/alive] run xp set @s 0 points
 
 
 #gametime
