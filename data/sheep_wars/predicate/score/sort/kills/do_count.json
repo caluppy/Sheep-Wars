@@ -1,12 +1,18 @@
-{
-    "condition": "entity_properties",
-    "entity": "this",
-    "predicate": {
-        "entity_tags": {
-            "none_of": [
-                "sheep_wars.score.sorted",
-                "sheep_wars.score.less"
-            ]
+[
+    {
+        "condition": "reference",
+        "name": "sheep_wars:player/on_team"
+    },
+    {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+            "entity_tags": {
+                "none_of": [
+                    "sheep_wars.score.sorted",
+                    "sheep_wars.score.less"
+                ]
+            }
         }
     }
-}
+]

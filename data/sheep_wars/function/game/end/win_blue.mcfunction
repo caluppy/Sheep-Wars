@@ -7,5 +7,7 @@ tag @a[predicate=sheep_wars:player/team_blue] add sheep_wars.player.win
 playsound minecraft:item.goat_horn.sound.1 master @a[predicate=sheep_wars:player/on_team] ~ ~ ~ 1 1
 title @a[predicate=sheep_wars:player/on_team] title [{"text":"Blue Team Wins!","color":"blue","bold":true}]
 
+function sheep_wars:game/end/leaderboard/kills/global/setup
+
 scoreboard players set #map time 10
 function sheep_wars:game/end/loop_1s/schedule

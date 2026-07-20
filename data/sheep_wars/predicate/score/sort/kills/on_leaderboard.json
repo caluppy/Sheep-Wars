@@ -1,0 +1,10 @@
+{
+    "condition": "entity_scores",
+    "entity": "this",
+    "scores": {
+        "sort.order.kills": {
+            "max": 3,
+            "min": 1
+        }
+    }
+}
