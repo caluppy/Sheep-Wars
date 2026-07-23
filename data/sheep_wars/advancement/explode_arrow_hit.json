@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "hit_tipped_arrow": {
+            "trigger": "effects_changed",
+            "conditions": {
+                "effects": {
+                    "bad_omen": {
+                        "amplifier": 0,
+                        "duration": 1
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "sheep_wars:game/tick/1s/cleanup/explosive_arrow_hit_player"
+    }
+}

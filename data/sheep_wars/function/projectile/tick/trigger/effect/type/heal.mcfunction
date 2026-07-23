@@ -1,8 +1,9 @@
 
 ##effect heal + particles 10t
 
-execute if predicate sheep_wars:projectile/properties/team_red run effect give @a[predicate=sheep_wars:player/team_blue,distance=..10] regeneration 1 2 true
+execute if predicate sheep_wars:projectile/properties/team_blue run effect give @a[predicate=sheep_wars:player/team_blue,distance=..10] regeneration 1 2 true
 execute if predicate sheep_wars:projectile/properties/team_red run effect give @a[predicate=sheep_wars:player/team_red,distance=..10] regeneration 1 2 true
+$execute if predicate sheep_wars:projectile/properties/team_none run effect give @a[scores={player_UUID_0=$(playerUUID)},distance=..10] regeneration 1 2 true
 
 scoreboard players set @s count 0
 

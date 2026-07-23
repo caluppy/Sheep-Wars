@@ -1,6 +1,4 @@
 
-
-
 execute store result score #bounce sheep_wars.options run random value 1..3
 
 execute if score #bounce sheep_wars.options matches 1 run tellraw @a[predicate=sheep_wars:player/alive] [{"text":" - ","color":"gray"},{"text":"Bounce: ","color":"dark_gray"},{"text":"Off","color":"gold"}]

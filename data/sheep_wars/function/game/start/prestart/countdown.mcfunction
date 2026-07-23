@@ -5,7 +5,6 @@
 
 #cosmetic display
 
-
 execute unless score #map time matches 0 run title @a[predicate=sheep_wars:player/alive] actionbar [{"text":"Game starts in: ","color":"gold"},{"score":{name:"#map",objective:"time"},"color":"red","bold":true}]
 execute unless score #map time matches 0 as @a[predicate=sheep_wars:player/alive] at @s run playsound ui.button.click master @s ~ ~ ~ 0.5 2
 

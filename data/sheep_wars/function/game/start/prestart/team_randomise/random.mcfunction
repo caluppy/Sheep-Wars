@@ -5,4 +5,4 @@ execute store result storage sheep_wars:options_randomise team byte 1 run random
 execute if data storage sheep_wars:options_randomise {team:true} run team join sheep_wars.blue @s
 execute if data storage sheep_wars:options_randomise {team:false} run team join sheep_wars.red @s
 
-execute if entity @a[predicate=sheep_wars:player/no_team] run function sheep_wars:game/start/prestart/team_randomise/assign
+execute if entity @a[predicate=sheep_wars:player/team_none] run function sheep_wars:game/start/prestart/team_randomise/assign

@@ -1,7 +1,12 @@
 
+#no team
+execute if predicate sheep_wars:player/team_none run effect give @s regeneration 30 1
+execute if predicate sheep_wars:player/team_none run return run tellraw @s [{"text":" + ","color":"green"},{"text":"Regeneration II","color":"light_purple"},{"text":" for 30 seconds.","color":"green"}]
+
+
 #blue team
 execute if predicate sheep_wars:player/team_blue run effect give @a[predicate=sheep_wars:player/team_blue] regeneration 30 1
-execute if predicate sheep_wars:player/team_blue run tellraw @a[predicate=sheep_wars:player/team_blue] [{"text":" + ","color":"green"},{"text":"Regeneration II","color":"light_purple"},{"text":" for 30 seconds.","color":"green"}]
+execute if predicate sheep_wars:player/team_blue run return run tellraw @a[predicate=sheep_wars:player/team_blue] [{"text":" + ","color":"green"},{"text":"Regeneration II","color":"light_purple"},{"text":" for 30 seconds.","color":"green"}]
 
 #red team
 execute if predicate sheep_wars:player/team_red run effect give @a[predicate=sheep_wars:player/team_red] regeneration 30 1

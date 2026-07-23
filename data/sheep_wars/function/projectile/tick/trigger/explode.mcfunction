@@ -9,5 +9,6 @@ $execute if entity @s[predicate=sheep_wars:projectile/summon_type/mortar_sheep] 
 $execute if entity @s[predicate=sheep_wars:projectile/summon_type/ride_carpet_squid] at @s run summon tnt ~ ~ ~ {fuse:30b,explosion_power:4,owner:$(owner),CustomName:{"text":"Squid Bomber","color":"dark_green"}}
 
 scoreboard players operation @n[type=tnt,distance=0] player_UUID_0 = @s player_UUID_0
+
 data merge entity @s {DeathLootTable:"minecraft:empty"}
 tp @s ~ -200 ~

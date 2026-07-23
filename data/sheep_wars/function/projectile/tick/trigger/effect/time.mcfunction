@@ -3,8 +3,8 @@ execute at @s if predicate sheep_wars:projectile/touching_barrier run scoreboard
 execute if entity @s[predicate=sheep_wars:score/time/lessequal_0] on passengers run kill @s
 execute if entity @s[predicate=sheep_wars:score/time/lessequal_0] run return run kill @s
 
-execute if predicate sheep_wars:projectile/summon_type/heal_sheep at @s run function sheep_wars:projectile/tick/trigger/effect/type/heal
-execute if predicate sheep_wars:projectile/summon_type/slow_sheep at @s run function sheep_wars:projectile/tick/trigger/effect/type/slow
+execute if predicate sheep_wars:projectile/summon_type/heal_sheep at @s run function sheep_wars:projectile/tick/trigger/effect/type/heal with entity @s data
+execute if predicate sheep_wars:projectile/summon_type/slow_sheep at @s run function sheep_wars:projectile/tick/trigger/effect/type/slow with entity @s data
 
 
 scoreboard players remove @s time 1

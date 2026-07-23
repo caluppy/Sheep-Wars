@@ -11,6 +11,7 @@ execute as @e[predicate=sheep_wars:do_clean] at @s run function sheep_wars:game/
 
 #resets player fall damage after riding sheep if touching ground
 execute as @a[predicate=sheep_wars:player/alive] if data entity @s {OnGround:true} run attribute @s fall_damage_multiplier base reset
+execute as @a[predicate=sheep_wars:player/alive] if data entity @s {OnGround:true} run scoreboard players set @s new_projectile.is_riding 0
 execute as @a[predicate=sheep_wars:player/alive] run xp set @s 0 points
 
 
@@ -37,6 +38,9 @@ execute if score #item.cooldown.final.blue sheep_wars.background <= #0 constants
 
 scoreboard players remove #item.cooldown.final.red sheep_wars.background 1
 execute if score #item.cooldown.final.red sheep_wars.background <= #0 constants run function sheep_wars:game/tick/1s/player_items/red
+
+scoreboard players remove #item.cooldown.final.none sheep_wars.background 1
+execute if score #item.cooldown.final.none sheep_wars.background <= #0 constants run function sheep_wars:game/tick/1s/player_items/none
 
 ##powerups
 scoreboard players remove #powerup.cooldown.final sheep_wars.background 1

@@ -1,11 +1,11 @@
 
 ##start of game end sequence w/ red win
 
-effect give @a[predicate=sheep_wars:player/team_red] resistance 20 255 true
-tag @a[predicate=sheep_wars:player/team_red] add sheep_wars.player.win
+effect give @a[predicate=sheep_wars:player/alive] resistance 20 255 true
+tag @a[predicate=sheep_wars:player/alive] add sheep_wars.player.win
 
 execute as @a[predicate=sheep_wars:player/on_team] at @s run playsound minecraft:item.goat_horn.sound.1 master @s ~ ~ ~ 1 1
-title @a[predicate=sheep_wars:player/on_team] title [{"text":"Red Team Wins!","color":"red","bold":true}]
+title @a[predicate=sheep_wars:player/on_team] title [{"selector":"@a[predicate=sheep_wars:player/win]"},{"text":" Wins!","color":"green","bold":true}]
 
 function sheep_wars:game/end/leaderboard/kills/global/setup
 

@@ -6,14 +6,16 @@ function sheep_wars:structure/map/clear/start
 
 bossbar remove sheep.wars.display.ready
 
-execute as @a[predicate=sheep_wars:player/alive] run function sheep_wars:game/start/prestart/initial_player
-execute if entity @a[predicate=sheep_wars:player/no_team] run function sheep_wars:game/start/prestart/team_randomise/assign
 
-schedule function sheep_wars:game/start/prestart/countdown 1s replace
 
 ##runs options list and randomises if needed
 #doesnt include map or spawnrate on purpose *smile*
 function sheep_wars:game/options/generic
+
+execute as @a[predicate=sheep_wars:player/alive] run function sheep_wars:game/start/prestart/initial_player
+execute if entity @a[predicate=sheep_wars:player/team_none] unless score #gamemode sheep_wars.options matches 3 run function sheep_wars:game/start/prestart/team_randomise/assign
+
+schedule function sheep_wars:game/start/prestart/countdown 1s replace
 
 ##sheep_wars.display is the sidebar display for game loop
 scoreboard objectives remove sheep_wars.display
@@ -30,6 +32,9 @@ team modify display.players_left.red color red
 team modify display.players_left.red prefix {"text":" - ","color":"gray"}
 
 team add display.players_left.total
+team modify display.players_left.total color white
+team modify display.players_left.total suffix [{"text":" Left: ","color":"white"}]
+
 
 team add display.game_time
 team modify display.game_time color green
@@ -37,12 +42,8 @@ team modify display.game_time prefix [{"text":" - ","color":"gray"},{"text":"Gam
 
 team join display.players_left.blue Blue
 team join display.players_left.red Red
-team join display.players_left.total Players:
+team join display.players_left.total Players
+
 
 team join display.game_time Time:
-
 #cosmetic team colors
-team add display.color.white
-team modify display.color.white color white
-team modify display.color.white suffix {"text":" Left:","color":"white"}
-team join display.color.white Players

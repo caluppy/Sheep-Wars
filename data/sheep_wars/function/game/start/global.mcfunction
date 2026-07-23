@@ -26,15 +26,18 @@ scoreboard objectives add sheep_wars.display dummy {"text":"Sheep Wars","color":
 scoreboard objectives modify sheep_wars.display numberformat blank
 scoreboard objectives setdisplay sidebar.team.blue sheep_wars.display
 scoreboard objectives setdisplay sidebar.team.red sheep_wars.display
+scoreboard objectives setdisplay sidebar.team.gray sheep_wars.display
 
 #using give air instead of team list because team list includes nonplayer entities on team
 execute store result score players.blue sheep_wars.background run give @a[predicate=sheep_wars:player/team_blue] air
 execute store result score players.red sheep_wars.background run give @a[predicate=sheep_wars:player/team_red] air
+execute store result score players.total sheep_wars.background run give @a[predicate=sheep_wars:player/alive] air
 team modify display.players_left.blue suffix [{"text":" "},{"score":{name:"players.blue","objective":"sheep_wars.background"},"color":"gold"}]
 team modify display.players_left.red suffix [{"text":" "},{"score":{name:"players.red","objective":"sheep_wars.background"},"color":"gold"}]
+team modify display.players_left.total suffix [{"text":" Left: ","color":"white"},{"score":{name:"players.total",objective:"sheep_wars.background"},color:"gold"}]
 
-scoreboard players set Blue sheep_wars.display 0
-scoreboard players set Red sheep_wars.display 0
+execute unless score #gamemode sheep_wars.options matches 3 run scoreboard players set Blue sheep_wars.display 0
+execute unless score #gamemode sheep_wars.options matches 3 run scoreboard players set Red sheep_wars.display 0
 scoreboard players set Players sheep_wars.display 1
 
 #timer display
@@ -43,6 +46,9 @@ scoreboard players set game.time.minutes sheep_wars.background 0
 team modify display.game_time suffix [{"text":" "},{"text":"0","color":"gold"},{"text":":","color":"yellow"},{"text":"00","color":"gold"}]
 scoreboard players set Time: sheep_wars.display 2
 
+##gamemode modifiers requiring scoreboard changes
+#currently only FFA
+execute if score #gamemode sheep_wars.options matches 3 run team join sheep_wars.none @a[predicate=sheep_wars:player/alive]
 
 #runs player specific functions
 execute as @a[predicate=sheep_wars:player/alive] at @s run function sheep_wars:game/start/team/player_generic
@@ -75,7 +81,7 @@ scoreboard players set #item.cooldown.base sheep_wars.background 3
 scoreboard players operation #item.cooldown.final.blue sheep_wars.background = #item.cooldown.base sheep_wars.background
 scoreboard players operation #item.cooldown.final.blue sheep_wars.background *= #spawnrate sheep_wars.options
 scoreboard players operation #item.cooldown.final.blue sheep_wars.background *= #cooldown.modifier.generic sheep_wars.background
-execute store result score #item.cooldown.final.red sheep_wars.background run scoreboard players operation #item.cooldown.final.blue sheep_wars.background *= #cooldown.modifier.blue sheep_wars.background
+execute store result score #item.cooldown.final.red sheep_wars.background store result score #item.cooldown.final.none sheep_wars.background run scoreboard players operation #item.cooldown.final.blue sheep_wars.background *= #cooldown.modifier.blue sheep_wars.background
 
 
 ##powerup scores

@@ -15,10 +15,11 @@ title @s actionbar {"text":"You Died","color":"red","bold":true}
 
 execute store result score players.blue sheep_wars.background run give @a[predicate=sheep_wars:player/team_blue] air
 execute store result score players.red sheep_wars.background run give @a[predicate=sheep_wars:player/team_red] air
+execute store result score players.total sheep_wars.background run give @a[predicate=sheep_wars:player/alive] air
 team modify display.players_left.blue suffix [{"text":" "},{"score":{name:"players.blue","objective":"sheep_wars.background"},"color":"gold"}]
 team modify display.players_left.red suffix [{"text":" "},{"score":{name:"players.red","objective":"sheep_wars.background"},"color":"gold"}]
+team modify display.players_left.total suffix [{"text":" Left: ","color":"white"},{"score":{name:"players.total",objective:"sheep_wars.background"},color:"gold"}]
 
-##trigger game end, probs need different functions for each winning team maybe?
-execute if score players.blue sheep_wars.background matches 0 if score players.red sheep_wars.background matches 0 run return run schedule function sheep_wars:game/end/win_tie 1t replace
-execute if score players.blue sheep_wars.background matches 0 run schedule function sheep_wars:game/end/win_red 1t replace
-execute if score players.red sheep_wars.background matches 0 run schedule function sheep_wars:game/end/win_blue 1t replace
+
+execute if score #gamemode sheep_wars.options matches 3 run function sheep_wars:game/death/end_detect_ffa
+execute unless score #gamemode sheep_wars.options matches 3 run function sheep_wars:game/death/end_detect_team

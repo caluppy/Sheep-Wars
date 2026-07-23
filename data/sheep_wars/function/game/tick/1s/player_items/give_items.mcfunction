@@ -13,6 +13,7 @@ execute if predicate sheep_wars:player/kit/restock run function sheep_wars:game/
 execute store result score @s count run clear @s #terracotta 0
 execute unless score @s[predicate=sheep_wars:player/team_blue] count >= #57 constants run give @s light_blue_terracotta 8
 execute unless score @s[predicate=sheep_wars:player/team_red] count >= #57 constants run give @s red_terracotta 8
+execute unless score @s[predicate=sheep_wars:player/team_none] count >= #57 constants run give @s light_gray_terracotta 8
 
 execute store result score @s count run clear @s #dyes[custom_data~{right_click:true}] 0
 execute if score @s count >= #20 constants at @s run return run function sheep_wars:game/tick/1s/player_items/give_fail

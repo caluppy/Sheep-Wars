@@ -8,6 +8,7 @@ $scoreboard players set @s entity_UUID_0 $(entityUUID)
 
 $execute if entity @a[predicate=sheep_wars:player/team_blue,scores={player_UUID_0=$(playerUUID)},limit=1] run team join sheep_wars.blue @s
 $execute if entity @a[predicate=sheep_wars:player/team_red,scores={player_UUID_0=$(playerUUID)},limit=1] run team join sheep_wars.red @s
+$execute if entity @a[predicate=sheep_wars:player/team_none,scores={player_UUID_0=$(playerUUID)},limit=1] run team join sheep_wars.none @s
 
 
 #sets position -> deltaposition=velocity/tick

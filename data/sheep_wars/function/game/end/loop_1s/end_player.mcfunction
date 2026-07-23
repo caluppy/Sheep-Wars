@@ -8,6 +8,8 @@ xp set @s 0 points
 
 spawnpoint @s 0 -2 0 90 -35
 tag @s remove sheep_wars.player.win
+tag @s remove sheep_wars.score.sorted
+tag @s remove sheep_wars.score.less
 
 effect give @s instant_health infinite 10 true
 effect give @s saturation infinite 255 true
@@ -16,6 +18,8 @@ effect give @s resistance infinite 255 true
 attribute @s attack_knockback base reset
 attribute @s bounciness base reset
 attribute @s air_drag_modifier base reset
+attribute @s fall_damage_multiplier base reset
+attribute @s safe_fall_distance base reset
 
 execute if predicate sheep_wars:player/do_randomise_team run team join sheep_wars.none
 execute if predicate sheep_wars:player/do_randomise_team run tag @s remove sheep_wars.player.random.team
