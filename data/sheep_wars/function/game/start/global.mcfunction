@@ -17,6 +17,8 @@ gamerule spawn_patrols false
 gamerule spawn_phantoms false
 gamerule spawn_wandering_traders false
 
+execute as @e[predicate=sheep_wars:lobby/interaction/start] at @s run kill @e[type=!player,distance=..5]
+bossbar remove sheep.wars.display.ready
 
 ##reset key scores + set up sidebar display
 scoreboard players set tick time 0

@@ -8,6 +8,8 @@ clear @s
 tag @s add sheep_wars.player
 spawnpoint @s 10000 0 10000
 
+tag @s remove sheep_wars.player.ready
+
 xp set @s 0 points
 xp set @s 0 levels
 

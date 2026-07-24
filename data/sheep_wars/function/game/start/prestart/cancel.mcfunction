@@ -1,0 +1,2 @@
+
+function sheep_wars:lobby/scoreboard_display/total

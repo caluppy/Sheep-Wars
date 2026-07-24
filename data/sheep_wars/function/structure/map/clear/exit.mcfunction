@@ -1,4 +1,4 @@
 
 ##exit function for map clear
 
-execute positioned 10000 0 10000 run kill @e[type=!player,distance=..500]
+execute as @e[predicate=sheep_wars:lobby/interaction/start] on passengers at @s as @e[type=!player,predicate=!sheep_wars:lobby/interaction/start,distance=1..500] run kill @s

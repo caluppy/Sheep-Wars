@@ -4,10 +4,6 @@
 scoreboard players set #map time 3
 function sheep_wars:structure/map/clear/start
 
-bossbar remove sheep.wars.display.ready
-
-
-
 ##runs options list and randomises if needed
 #doesnt include map or spawnrate on purpose *smile*
 function sheep_wars:game/options/generic
