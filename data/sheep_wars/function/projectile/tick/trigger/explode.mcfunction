@@ -1,6 +1,8 @@
 
 ##triggers explosion type based on entity predicates
 
+execute if score #gamemode sheep_wars.options matches 2 run return run function sheep_wars:projectile/tick/trigger/spleef_explode with entity @s data
+
 $execute if entity @s[predicate=sheep_wars:projectile/summon_type/base_sheep] at @s run summon tnt ~ ~ ~ {fuse:5b,explosion_power:4,owner:$(owner),CustomName:{"text":"Sheep Missile","color":"green"}}
 $execute if entity @s[predicate=sheep_wars:projectile/summon_type/ride_fast_sheep] at @s run summon tnt ~ ~ ~ {fuse:30b,explosion_power:2,owner:$(owner),CustomName:{"text":"Sheep Hang Glider","color":"blue"}}
 
