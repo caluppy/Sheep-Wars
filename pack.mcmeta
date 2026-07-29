@@ -1,6 +1,14 @@
 {
-    "pack":{
+    "pack": {
         "min_format": 107.1,
-        "description": "datapack for sheep wars"
+        "description": {
+            "sprite":"block/white_wool",
+            "extra": [
+                {
+                    "text": " Loaded for sheep wars",
+                    "color": "green"
+                }
+            ]
+        }
     }
 }
