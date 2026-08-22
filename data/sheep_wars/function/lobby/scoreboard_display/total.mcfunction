@@ -10,6 +10,36 @@ scoreboard objectives setdisplay sidebar.team.blue sheep_wars.display
 scoreboard objectives setdisplay sidebar.team.red sheep_wars.display
 scoreboard objectives setdisplay sidebar.team.gray sheep_wars.display
 
+team add display.players_left.blue
+team modify display.players_left.blue color blue
+team modify display.players_left.blue prefix {"text":" - ","color":"gray"}
+
+team add display.players_left.red
+team modify display.players_left.red color red
+team modify display.players_left.red prefix {"text":" - ","color":"gray"}
+
+team add display.players_left.total
+team modify display.players_left.total color white
+team modify display.players_left.total suffix [{"text":" Left: ","color":"white"}]
+
+
+team add display.game_time
+team modify display.game_time color green
+team modify display.game_time prefix [{"text":" - ","color":"gray"},{"text":"Game ","color":"green"}]
+
+team join display.players_left.blue Blue
+team join display.players_left.red Red
+team join display.players_left.total Players
+
+
+execute store result score players.blue sheep_wars.background run give @a[predicate=sheep_wars:player/team_blue] air
+execute store result score players.red sheep_wars.background run give @a[predicate=sheep_wars:player/team_red] air
+execute store result score players.total sheep_wars.background run give @a[predicate=sheep_wars:player/alive] air
+team modify display.players_left.blue suffix [{"text":" "},{"score":{name:"players.blue","objective":"sheep_wars.background"},"color":"gold"}]
+team modify display.players_left.red suffix [{"text":" "},{"score":{name:"players.red","objective":"sheep_wars.background"},"color":"gold"}]
+team modify display.players_left.total suffix [{"text":" Left: ","color":"white"},{"score":{name:"players.total",objective:"sheep_wars.background"},color:"gold"}]
+
+
 ##Lobby score cosmetic load
 # every § means new blank score 
 

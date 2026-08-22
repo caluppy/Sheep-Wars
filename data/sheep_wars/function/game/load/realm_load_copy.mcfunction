@@ -3,6 +3,7 @@
 
 #click event scoreboards
 scoreboard objectives add right.click dummy
+scoreboard objectives add consume dummy
 
 ##check loaded
 scoreboard objectives add realm.loaded dummy
@@ -20,7 +21,7 @@ scoreboard objectives add velocity.x dummy
 scoreboard objectives add velocity.y dummy
 scoreboard objectives add velocity.z dummy
 
-#useful scores for all games
+#useful scores for all games:
 scoreboard objectives add time dummy
 scoreboard objectives add count dummy
 scoreboard objectives add food food
@@ -28,15 +29,20 @@ scoreboard objectives add health health
 scoreboard objectives add death deathCount
 scoreboard objectives add kills playerKillCount
 scoreboard objectives add sort.count dummy
+scoreboard objectives add attempt.consume dummy
+
 
 #math scoreboards for constants 
 scoreboard objectives add constants dummy
 scoreboard players set #0 constants 0
+scoreboard players set #2 constants 2
 scoreboard players set #3 constants 3
 scoreboard players set #8 constants 8
 scoreboard players set #10 constants 10
 scoreboard players set #20 constants 20
+scoreboard players set #50 constants 50
 scoreboard players set #57 constants 57
+scoreboard players set #100 constants 100
 scoreboard players set #10000 constants 10000
 
 #player UUID scoreboards for summoning player specific entities

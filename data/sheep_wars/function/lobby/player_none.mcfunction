@@ -17,7 +17,14 @@ team remove display.players_left.blue
 team remove display.players_left.red
 team remove display.players_left.total
 team remove display.game_time
-team remove display.color.white
+team remove display.lobby.map
+team remove display.lobby.gamemode
+team remove display.lobby.spawnrate
+team remove display.lobby.friendly_fire
+team remove display.lobby.bounce
+team remove sheep_wars.blue
+team remove sheep_wars.red
+team remove sheep_wars.none
 
 bossbar remove sheep.wars.display.ready
 

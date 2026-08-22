@@ -3,6 +3,15 @@
 
 tellraw @a[tag=realm.operator] [{"text":"> Loaded","color":"green"},{"text":" Sheepwars","color":"gold"}]
 
+team add sheep_wars.blue {"text":"Blue Team","color":"blue"}
+team modify sheep_wars.blue color blue
+
+team add sheep_wars.red {"text":"Red Team","color":"red"}
+team modify sheep_wars.red color red
+
+team add sheep_wars.none {"text":"No Team","color":"gray"}
+team modify sheep_wars.none color gray
+
 #applies local sheepwars player tag so effects isnt global
 execute positioned 10000 -64 10000 run tag @a[distance=..500] add sheep_wars.player
 team join sheep_wars.none @a[predicate=sheep_wars:player/alive,predicate=sheep_wars:player/no_team]
@@ -26,14 +35,5 @@ scoreboard players set @a[predicate=sheep_wars:player/alive] sheep_wars.options 
 
 scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.cooldown 0
 scoreboard players set @a[predicate=sheep_wars:player/alive] new_projectile.is_riding 0
-
-team add sheep_wars.blue {"text":"Blue Team","color":"blue"}
-team modify sheep_wars.blue color blue
-
-team add sheep_wars.red {"text":"Red Team","color":"red"}
-team modify sheep_wars.red color red
-
-team add sheep_wars.none {"text":"No Team","color":"gray"}
-team modify sheep_wars.none color gray
 
 execute if score #game.running sheep_wars.background matches 0 run function sheep_wars:lobby/scoreboard_display/total
